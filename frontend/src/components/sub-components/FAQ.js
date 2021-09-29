@@ -3,7 +3,7 @@ import React from "react";
 function FAQ() {
   return (
     <div>
-      <p>Frequently Asked Questions</p>
+      <h2>Frequently Asked Questions</h2>
     </div>
   );
 }
