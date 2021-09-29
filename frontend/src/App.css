@@ -4,37 +4,38 @@
   background-color: white;
 }
 body {
-  background-image: url("./Images/G-297_1024x1024.jpg");
+  background-color: rgb(196, 194, 194);
 }
 h1 {
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(5, 69, 19);
+  background-color: rgb(40, 40, 40);
 }
 p {
-  color: white;
+  color: rgb(40, 40, 40);
   border: 1px solid white;
-  background-color: rgb(5, 69, 19);
+  background-color: white;
 }
-a {
-  color: white;
-  background-color: rgb(5, 69, 19);
-}
-ul {
-  background-color: rgb(5, 69, 19);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.land {
+  background-color: rgb(255, 98, 0);
+  border: rgb(255, 98, 0) solid 1px;
+  border-radius: 2px;
 }
 
+.optionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
 footer {
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(5, 69, 19);
+  background-color: rgb(40, 40, 40);
 }
 h2 {
   display: flex;

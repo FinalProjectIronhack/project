@@ -31,22 +31,32 @@ function SportHome(props) {
       </div>
 
       <div className="optionsContainer">
-        <ul>
-          <li>
-            <Link to="/how-does-it-work">How Does it work</Link>
-            <br></br>
-            <Link to="/sign-up">Sign Up</Link>
-          </li>
-          <li>
-            <Link to="/FAQ">Frequently Asked Questions</Link>
-          </li>
-          <li>
-            <Link to="/find-players">Find A Player</Link> <br></br>
-            <Link to="/login">Login</Link>
-          </li>
-        </ul>
-      </div>
+        <div className="land">
+          <Link className="button" to="/how-does-it-work">
+            How Does it work
+          </Link>
+          <br></br>
+          <Link className="button" to="/sign-up">
+            Sign Up
+          </Link>
+        </div>
+        <div className="land">
+          <Link className="button" to="/FAQ">
+            Frequently Asked <br></br>
+            Questions
+          </Link>
+        </div>
 
+        <div className="land">
+          <Link className="button" to="/find-players">
+            Find A Player
+          </Link>{" "}
+          <br></br>
+          <Link className="button" to="/login">
+            Login
+          </Link>
+        </div>
+      </div>
 
       <footer>
         <h2>
