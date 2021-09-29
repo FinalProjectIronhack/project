@@ -46,8 +46,8 @@ function SportHome(props) {
           </li>
         </ul>
       </div>
-      <HowItWorks />
-      <SignUp />
+
+
       <footer>
         <h2>
           {" "}
