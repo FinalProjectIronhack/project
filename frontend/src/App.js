@@ -1,39 +1,69 @@
-import { useEffect, useState } from 'react'
-import './App.css';
-import { Link, Route, Switch } from 'react-router-dom';
-import Home from './components/Home'
-import AllPosts from './components/AllPosts'
-import NewPost from './components/NewPost'
+import { useEffect, useState } from "react";
+import "./App.css";
+import { Link, Route, Switch } from "react-router-dom";
 
-import Profile from './components/Profile'
-import Header from './components/Header'
-import TheContext from './TheContext';
-import actions from './api';
+import AllPosts from "./components/AllPosts";
+import NewPost from "./components/NewPost";
+import SportHome from "./components/SportHome";
+import SportProfile from "./components/SportProfile";
+import Header from "./components/Header";
+import TheContext from "./TheContext";
+import actions from "./api";
+import MyPosts from "./components/MyPosts";
+import HowItWorks from "./components/sub-components/HowItWorks";
+import SportMessenger from "./components/SportMessenger";
+import SignUp from "./components/sub-components/SignUp";
+import FAQ from "./components/sub-components/FAQ";
 
 function App() {
-
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState({});
 
   useEffect(async () => {
-    getUser()
-  }, [])
-
+    getUser();
+  }, []);
 
   const getUser = async () => {
-    let res = await actions.getUser()
-    setUser(res?.data)
-  }
+    let res = await actions.getUser();
+    setUser(res?.data);
+  };
 
   return (
     <TheContext.Provider value={{ user, setUser, getUser }}>
       <Header />
       <Switch>
-        <Route exact path="/" render={(props) => <Home user={user} {...props} />} />
-        <Route exact path="/all-posts" render={(props) => <AllPosts user={user} {...props} />} />
-        <Route exact path="/new-post" render={(props) => <NewPost user={user} {...props} />} />
-        <Route exact path="/profile" render={(props) => <Profile user={user} {...props} />} />
-      </Switch>
+        <Route
+          exact
+          path="/my-posts"
+          render={(props) => <MyPosts user={user} {...props} />}
+        />
 
+        <Route
+          exact
+          path="/"
+          render={(props) => <SportHome user={user} {...props} />}
+        />
+        <Route
+          exact
+          path="/all-posts"
+          render={(props) => <AllPosts user={user} {...props} />}
+        />
+        <Route
+          exact
+          path="/new-post"
+          render={(props) => <NewPost user={user} {...props} />}
+        />
+        <Route
+          exact
+          path="/Sportprofile"
+          render={(props) => <SportProfile user={user} {...props} />}
+        />
+        <Route exact path="/how-does-it-work" component={HowItWorks} />
+        <Route exact path="/sign-up" component={SignUp} />
+        <Route exact path="/FAQ" component={FAQ} />
+        {/* <Route exact path="/find-players" component={FindPlayer} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/messenger" component={Messenger} /> */}
+      </Switch>
     </TheContext.Provider>
   );
 }

@@ -10,6 +10,16 @@ router.get("/all-posts", async (req, res) => {
   res.json(allPosts);
 });
 
+router.get("/my-posts", authorize, async (req, res) => {
+  let allPosts = await Post.find({ userId: res.locals.user._id }).populate(
+    "userId"
+  );
+  console.log(res.locals.user);
+  res.json(allPosts);
+  // we need posts, userId, then we need to match the userId with our current user and only show the current users post. no filters
+  //were gonna grab so we need to still use await(because we already used async) Post.find(current user) were going to populate(posts and name)
+});
+
 //http://localhost:5000/api/new-post POST
 router.post("/new-post", authorize, async (req, res) => {
   //Everyime you put authorize as middleware you'll have the user as res.locals.user
@@ -43,6 +53,7 @@ function authorize(req, res, next) {
       if (!err) {
         res.locals.user = data.user; //Set global variable with user data in the backend
         next();
+        // data.user set to res.local.use which is used above in my-post
       } else {
         res.status(403).json({ message: err });
         //throw new Error({ message: "ahhh" })

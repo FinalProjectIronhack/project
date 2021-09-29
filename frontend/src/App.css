@@ -1,0 +1,43 @@
+.logodiv > img {
+  width: 180px;
+  height: 100px;
+  background-color: white;
+}
+body {
+  background-image: url("./Images/G-297_1024x1024.jpg");
+}
+h1 {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(5, 69, 19);
+}
+p {
+  color: white;
+  border: 1px solid white;
+  background-color: rgb(5, 69, 19);
+}
+a {
+  color: white;
+  background-color: rgb(5, 69, 19);
+}
+ul {
+  background-color: rgb(5, 69, 19);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(5, 69, 19);
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
