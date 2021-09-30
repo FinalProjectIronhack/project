@@ -1,8 +1,13 @@
-.logodiv > img {
+/* .logodiv > img {
   width: 180px;
   height: 100px;
   background-color: white;
-}
+} */
+/* position: absolute;
+width: 389px;
+height: 167px; */
+
+/* background: url(round-removebg-preview.png); */
 body {
   background-color: rgb(196, 194, 194);
 }

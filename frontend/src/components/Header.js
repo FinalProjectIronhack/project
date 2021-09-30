@@ -2,6 +2,7 @@ import { Link, Route, Switch } from "react-router-dom";
 import { useContext } from "react";
 import TheContext from "../TheContext";
 import Auth from "./Auth";
+import "../App.css";
 
 function Header(props) {
   const logOut = () => {
