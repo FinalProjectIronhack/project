@@ -9,15 +9,25 @@ const jwt = require("jsonwebtoken");
 //http://localhost:5000/api/all-posts GET
 router.get("/all-posts", async (req, res) => {
   let allPosts = await Post.find().populate("userId");
-  console.log(allPosts);
   res.json(allPosts);
 });
 
 //http://localhost:5000/api/questions POST To manage questions
 router.post("/questions", async (req, res) => {
   let question = await Question.create(req.body);
-  let allQuestions = await Question.find();
 
+  res.json(question);
+});
+
+//http://localhost:5000/api/show-questions GET
+router.get("/all-questions", authorize, async (req, res) => {
+  console.log(res.locals.user);
+  let allQuestions = null;
+  if (res.locals.user.admin) {
+    allQuestions = await Question.find();
+  } else {
+    allQuestions = await Question.find({ show: true });
+  }
   res.json(allQuestions);
 });
 
@@ -66,12 +76,18 @@ function authorize(req, res, next) {
         next();
         // data.user set to res.local.use which is used above in my-post
       } else {
-        res.status(403).json({ message: err });
+        console.log(`you're not logged in!!!`);
+        res.locals.user = {};
+        next();
+
+        // res.status(403).json({ message: err });
         //throw new Error({ message: "ahhh" })
       }
     });
   } else {
-    res.status(403).json({ message: "Must be logged in!" });
+    console.log(`you're not logged in`);
+    next();
+    // res.status(403).json({ message: "Must be logged in!" });
   }
 }
 

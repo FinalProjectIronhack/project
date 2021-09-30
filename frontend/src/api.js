@@ -21,6 +21,10 @@ const actions = {
       createHeader()
     );
   },
+  getQuestions: async () => {
+    return await axios.get(`${SERVER_URL}/all-questions`, createHeader());
+  },
+
   getMyPosts: async () => {
     return await axios.get(`${SERVER_URL}/my-posts`, createHeader());
   },
