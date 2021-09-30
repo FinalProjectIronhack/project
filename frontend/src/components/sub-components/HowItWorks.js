@@ -1,7 +1,6 @@
 import React from "react";
 import image from "../../Images/how_it_works_version3.png"
 function HowItWorks() {
-
   return (
     <div className="HowitworkspageImg">
       <img src={image} alt="image" />

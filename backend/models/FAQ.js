@@ -1,12 +1,12 @@
 const { Schema, model } = require("mongoose");
 
-const postSchema = new Schema(
+const faqSchema = new Schema(
   {
-    title: String,
-    post: String,
+    question: String,
+    answer: String,
     userId: { type: Schema.Types.ObjectId, ref: "User" },
   },
   { timestamps: true }
 );
 
-module.exports = model("Post", postSchema);
+module.exports = model("FAQ", faqSchema);

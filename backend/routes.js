@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Post = require("./models/Post");
 const User = require("./models/User");
+const FAQ = require("./models/FAQ");
 const jwt = require("jsonwebtoken");
 
 //http://localhost:5000/api/all-posts GET
