@@ -14,6 +14,13 @@ const createHeader = () => {
 
 //THIS IS WHERE WE CONNECT TO THE BACKEND >> OUR FRONT END ROUTES
 const actions = {
+  createQuestion: async ({ name, question }) => {
+    return await axios.post(
+      `${SERVER_URL}/questions`,
+      { name, question },
+      createHeader()
+    );
+  },
   getMyPosts: async () => {
     return await axios.get(`${SERVER_URL}/my-posts`, createHeader());
   },
