@@ -13,7 +13,7 @@ import MyPosts from "./components/MyPosts";
 import HowItWorks from "./components/sub-components/HowItWorks";
 import SportMessenger from "./components/SportMessenger";
 import SignUp from "./components/sub-components/SignUp";
-import FAQ from "./components/sub-components/FAQ";
+import Faq from "./components/sub-components/FAQ";
 
 function App() {
   const [user, setUser] = useState({});
@@ -59,7 +59,7 @@ function App() {
         />
         <Route exact path="/how-does-it-work" component={HowItWorks} />
         <Route exact path="/sign-up" component={SignUp} />
-        <Route exact path="/FAQ" component={FAQ} />
+        <Route exact path="/FAQ" component={Faq} />
         {/* <Route exact path="/find-players" component={FindPlayer} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/messenger" component={Messenger} /> */}
