@@ -42,11 +42,20 @@ router.get("/my-posts", authorize, async (req, res) => {
 
 router.get("/my-profile", authorize, async (req, res) => {
   let profile = await User.findById({ _id: res.locals.user._id });
-  console.log(res.locals.user._id);
-  console.log(profile);
+
   res.json(profile);
   // we need posts, userId, then we need to match the userId with our current user and only show the current users post. no filters
   //were gonna grab so we need to still use await(because we already used async) Post.find(current user) were going to populate(posts and name)
+});
+router.post("/my-profile", authorize, async (req, res) => {
+  let update = req.body;
+  let updateProfile = await User.findOneAndUpdate(
+    { _id: res.locals.user._id },
+    update,
+    { new: true }
+  );
+  // res.json(profile);
+  res.json(updateProfile);
 });
 
 //http://localhost:5000/api/new-post POST

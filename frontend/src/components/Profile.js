@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import actions from "../api";
+import UserDetails from "./UserDetails";
 function Profile(props) {
   // we need to connect with back end aoutes and front end API
   // display user infromation by grabbing google authentication info
@@ -22,6 +23,8 @@ function Profile(props) {
 
         <p>welcome to my page!</p>
         <img src={profile.imageUrl} />
+        <p>{profile.zip}</p>
+        <p>{profile.sports}</p>
         <hr></hr>
       </div>
     );
@@ -30,6 +33,7 @@ function Profile(props) {
   return (
     <div>
       <ShowProfile />
+      <UserDetails />
     </div>
   );
 }

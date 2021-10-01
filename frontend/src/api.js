@@ -27,6 +27,14 @@ const actions = {
   getProfile: async () => {
     return await axios.get(`${SERVER_URL}/my-profile`, createHeader());
   },
+  createUserDetails: async ({ bio, sports, gender, zip }) => {
+    return await axios.post(
+      `${SERVER_URL}/my-profile`,
+      { bio, sports, gender, zip },
+      createHeader()
+    );
+  },
+  // we want to grab the data submitted, send it to back end. then we want to go to the profile, get the submitted details from the back end, and post them to the details portion of the page.
   getMyPosts: async () => {
     return await axios.get(`${SERVER_URL}/my-posts`, createHeader());
   },

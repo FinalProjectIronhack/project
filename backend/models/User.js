@@ -8,12 +8,12 @@ const userSchema = new Schema(
       type: String,
       enum: ["Tennis", "Soccer", "Cricket", "Frisbee Golf", "Golf"],
     },
-    Level: { type: Number, min: 1, max: 5 },
+    level: { type: Number, min: 1, max: 5 },
     gender: {
       type: String,
       enum: ["M", "f", "other"],
     },
-    zipCode: { type: Number, min: 0, max: 99999 },
+    zip: { type: Number, min: 0, max: 99999 },
 
     name: String,
     email: String,
