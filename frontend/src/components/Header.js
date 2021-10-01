@@ -1,7 +1,10 @@
 import { Link, Route, Switch } from "react-router-dom";
 import { useContext } from "react";
+import logo from "../Images/FinalProLogoBro.png";
 import TheContext from "../TheContext";
 import Auth from "./Auth";
+import Mainimg from "../Images/Mainimg.jpg"
+
 
 function Header(props) {
   const logOut = () => {
@@ -12,8 +15,13 @@ function Header(props) {
   let { user, setUser, getUser } = useContext(TheContext);
 
   return (
-    <>
-      <header>
+    <div>
+      <header className="header">
+        <div className="logodiv">
+          <img src={logo} />
+          <h1>Play Sports</h1>
+        </div>
+
         <div id="auth">
           {user?.name ? (
             <div>
@@ -24,19 +32,26 @@ function Header(props) {
             <Auth getUser={getUser} />
           )}
         </div>
+
+        <div className="navBar">
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/all-posts">FindAPlayer</Link>
+            {user?.name ? (
+              <>
+                <Link to="/new-post">MyProfile</Link>
+                <Link to="/profile">Messenges</Link>
+              </>
+            ) : null}
+          </nav>
+        </div>
       </header>
 
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/all-posts">All</Link>
-        {user?.name ? (
-          <>
-            <Link to="/new-post">New</Link>
-            <Link to="/profile">Profile</Link>
-          </>
-        ) : null}
-      </nav>
-    </>
+      <div className="mainimg">
+        <img src={Mainimg} alt="MainImage"></img>
+      </div>
+
+    </div>
   );
 }
 
