@@ -3,7 +3,7 @@ import { useContext } from "react";
 import logo from "../Images/FinalProLogoBro.png";
 import TheContext from "../TheContext";
 import Auth from "./Auth";
-import Mainimg from "../Images/Mainimg.jpg"
+import Mainimg from "../Images/Mainimg.jpg";
 import "../App.css";
 
 function Header(props) {
@@ -39,7 +39,7 @@ function Header(props) {
             <Link to="/all-posts">FindAPlayer</Link>
             {user?.name ? (
               <>
-                <Link to="/new-post">MyProfile</Link>
+                <Link to="/my-profile">MyProfile</Link>
                 <Link to="/profile">Messenges</Link>
               </>
             ) : null}
@@ -50,7 +50,6 @@ function Header(props) {
       <div className="mainimg">
         <img src={Mainimg} alt="MainImage"></img>
       </div>
-
     </div>
   );
 }

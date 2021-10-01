@@ -14,7 +14,7 @@ import HowItWorks from "./components/sub-components/HowItWorks";
 import SportMessenger from "./components/SportMessenger";
 import SignUp from "./components/sub-components/SignUp";
 import Faq from "./components/sub-components/FAQ";
-
+import Profile from "./components/Profile";
 function App() {
   const [user, setUser] = useState({});
 
@@ -56,6 +56,11 @@ function App() {
           exact
           path="/Sportprofile"
           render={(props) => <SportProfile user={user} {...props} />}
+        />
+        <Route
+          exact
+          path="/my-profile"
+          render={(props) => <Profile user={user} {...props} />}
         />
         <Route exact path="/how-does-it-work" component={HowItWorks} />
         <Route exact path="/sign-up" component={SignUp} />
