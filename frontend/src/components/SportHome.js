@@ -9,6 +9,7 @@ import SignUp from "./sub-components/SignUp";
 import HowItWorks from "./sub-components/HowItWorks";
 import Messenger from "./SportMessenger";
 
+
 function SportHome(props) {
   return (
     <div>
@@ -21,11 +22,14 @@ function SportHome(props) {
         <Route exact path="/messenger" component={Messenger} />
       </Switch> */}
 
-      <header>
+      {/* <header className="header">
         <div className="logodiv">
-          <img src={logo} />
+          Play Sports<img src={logo} />
         </div>
-      </header>
+      
+
+      </header> */}
+
       <div classname="title">
         <h1>Sport Connections Made Simple.</h1>
       </div>
@@ -46,25 +50,31 @@ function SportHome(props) {
             Questions
           </Link>
         </div>
-
         <div className="land">
           <Link className="button" to="/find-players">
             Find A Player
-          </Link>{" "}
-          <br></br>
-          <Link className="button" to="/login">
-            Login
           </Link>
+          <br></br>
+          <div>
+            <Link className="button" to="/login">
+              Login
+            </Link>
+          </div>
         </div>
-      </div>
 
+
+      </div>
       <footer>
-        <h2>
-          {" "}
-          Sport Home is a non-profit that has saved 5000 babies from sugar
-          deprivation in the serengeti
-        </h2>
+        <div class="container">
+          <p> <img src={logo} />Designed By
+            <a target="_blank" href="/https://github.com/PraveenaMallipeddi">Praveena</a>,
+            <a target="_blank" href="/https://github.com/Michael">Michael</a> and
+            <a target="_blank" href="/https://github.com/Bruno">Bruno</a>
+          </p>
+        </div>
       </footer>
+
+
     </div>
   );
 }
