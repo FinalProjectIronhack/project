@@ -2,13 +2,33 @@ const express = require("express");
 const router = express.Router();
 const Post = require("./models/Post");
 const User = require("./models/User");
-const FAQ = require("./models/FAQ");
+const FAQ = require("./models/FreqQuestions");
+const Question = require("./models/Question");
 const jwt = require("jsonwebtoken");
 
 //http://localhost:5000/api/all-posts GET
 router.get("/all-posts", async (req, res) => {
   let allPosts = await Post.find().populate("userId");
   res.json(allPosts);
+});
+
+//http://localhost:5000/api/questions POST To manage questions
+router.post("/questions", async (req, res) => {
+  let question = await Question.create(req.body);
+
+  res.json(question);
+});
+
+//http://localhost:5000/api/show-questions GET
+router.get("/all-questions", authorize, async (req, res) => {
+  console.log(res.locals.user);
+  let allQuestions = null;
+  if (res.locals.user.admin) {
+    allQuestions = await Question.find();
+  } else {
+    allQuestions = await Question.find({ show: true });
+  }
+  res.json(allQuestions);
 });
 
 router.get("/my-posts", authorize, async (req, res) => {
@@ -41,14 +61,14 @@ router.post("/authenticate", async (req, res) => {
     //if the user is not in database create them
     user = await User.create(req.body);
   }
-  jwt.sign({ user }, "secret key", { expiresIn: "30min" }, (err, token) => {
+  jwt.sign({ user }, "secret key", { expiresIn: "120min" }, (err, token) => {
     res.json({ user, token });
   });
 });
 
 //Middleware >>> Put this in the middle of any route where you want to authorize
 function authorize(req, res, next) {
-  let token = req.headers.authorization.split(" ")[1]; //Token from front end
+  let token = req?.headers?.authorization?.split(" ")[1]; //Token from front end
   if (token) {
     jwt.verify(token, "secret key", (err, data) => {
       if (!err) {
@@ -56,12 +76,18 @@ function authorize(req, res, next) {
         next();
         // data.user set to res.local.use which is used above in my-post
       } else {
-        res.status(403).json({ message: err });
+        console.log(`you're not logged in!!!`);
+        res.locals.user = {};
+        next();
+
+        // res.status(403).json({ message: err });
         //throw new Error({ message: "ahhh" })
       }
     });
   } else {
-    res.status(403).json({ message: "Must be logged in!" });
+    console.log(`you're not logged in`);
+    next();
+    // res.status(403).json({ message: "Must be logged in!" });
   }
 }
 

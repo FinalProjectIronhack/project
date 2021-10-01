@@ -1,0 +1,92 @@
+.hiwi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 80vh;
+  position: static;
+}
+.hiwh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+hr {
+  /* border: 0.5px solid rgb(143, 142, 142); */
+  color: rgb(143, 142, 142);
+  width: 40vw;
+}
+.hiwd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e5e5e5;
+}
+.body {
+  background-color: white;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 150;
+  margin-top: 100px;
+  border-radius: 5px;
+}
+.containerHeader {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  background: rgb(101, 100, 100);
+  border: 2px solid rgb(101, 100, 100);
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  height: 10vw;
+}
+.mission {
+  width: 125px;
+  height: 125px;
+  background-color: white;
+}
+.running {
+  width: 125px;
+  height: 125px;
+  background-color: white;
+}
+.steps {
+  width: 125px;
+  height: 125px;
+  background-color: white;
+}
+.select {
+  width: 125px;
+  height: 125px;
+  background-color: white;
+}
+.container {
+  display: flex;
+  margin: 20px;
+  padding: 50px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+button {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 20px;
+
+  background: #fc5200;
+  border: 2px solid #fc5200;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+h1 {
+  color: black;
+  background-color: white;
+}

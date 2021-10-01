@@ -46,11 +46,12 @@ img{
   color:white;
   box-sizing: border-box;
   width:25vw; 
+  align-content: center;
 }
 footer{
   margin-top: 50px;
- 
-  padding-bottom: 50px;
+
+  
   background-color:black;
   text-align: center;
 }
@@ -82,7 +83,7 @@ footer{
   margin: 10px;
   font-family:fantasy ;
   color:black;
-  flex-direction:column-reverse;
+  align-content: center;
 
 }
 
