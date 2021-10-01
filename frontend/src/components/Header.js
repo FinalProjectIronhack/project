@@ -3,7 +3,7 @@ import { useContext } from "react";
 import logo from "../Images/FinalProLogoBro.png";
 import TheContext from "../TheContext";
 import Auth from "./Auth";
-import Mainimg from "../Images/Mainimg.jpg";
+import Mainimg from "../Images/runreal.jpg";
 import "../App.css";
 
 function Header(props) {
