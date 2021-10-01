@@ -3,7 +3,7 @@ import { useContext } from "react";
 import logo from "../Images/FinalProLogoBro.png";
 import TheContext from "../TheContext";
 import Auth from "./Auth";
-import Mainimg from "../Images/Mainimg.jpg"
+import Mainimg from "../Images/Mainimg.jpg";
 import "../App.css";
 
 function Header(props) {
@@ -25,7 +25,7 @@ function Header(props) {
         <div id="auth">
           {user?.name ? (
             <div>
-              <h4>{user?.name}</h4>
+              <img src={user?.imageUrl} alt="profileImg" />
               <button onClick={logOut}>Log Out</button>
             </div>
           ) : (
@@ -50,7 +50,6 @@ function Header(props) {
       <div className="mainimg">
         <img src={Mainimg} alt="MainImage"></img>
       </div>
-
     </div>
   );
 }
