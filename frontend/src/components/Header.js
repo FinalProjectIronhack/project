@@ -39,7 +39,7 @@ function Header(props) {
             <Link to="/all-posts">FindAPlayer</Link>
             {user?.name ? (
               <>
-                <Link to="/new-post">MyProfile</Link>
+                <Link to="/my-profile">MyProfile</Link>
                 <Link to="/profile">Messenges</Link>
               </>
             ) : null}
