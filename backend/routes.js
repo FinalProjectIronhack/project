@@ -15,7 +15,6 @@ router.get("/all-posts", async (req, res) => {
 //http://localhost:5000/api/questions POST To manage questions
 router.post("/questions", async (req, res) => {
   let question = await Question.create(req.body);
-
   res.json(question);
 });
 
