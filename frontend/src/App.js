@@ -15,6 +15,7 @@ import SportMessenger from "./components/SportMessenger";
 import SignUp from "./components/sub-components/SignUp";
 import Faq from "./components/sub-components/FAQ";
 import Profile from "./components/Profile";
+import Footer from "./components/sub-components/Footer";
 function App() {
   const [user, setUser] = useState({});
 
@@ -69,6 +70,7 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/messenger" component={Messenger} /> */}
       </Switch>
+      <Footer />
     </TheContext.Provider>
   );
 }

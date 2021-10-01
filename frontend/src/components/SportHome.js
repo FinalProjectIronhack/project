@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Images/FinalProLogoBro.png";
+
 import "../App.css";
 import { Switch, Link, Route } from "react-router-dom";
 import Login from "./sub-components/Login";
@@ -8,7 +8,6 @@ import FAQ from "./sub-components/FAQ";
 import SignUp from "./sub-components/SignUp";
 import HowItWorks from "./sub-components/HowItWorks";
 import Messenger from "./SportMessenger";
-
 
 function SportHome(props) {
   return (
@@ -30,8 +29,8 @@ function SportHome(props) {
 
       </header> */}
 
-      <div classname="title">
-        <h1>Sport Connections Made Simple.</h1>
+      <div classname="iceberg">
+        <h1>Sport Connections Made Simple </h1>
       </div>
 
       <div className="optionsContainer">
@@ -61,20 +60,7 @@ function SportHome(props) {
             </Link>
           </div>
         </div>
-
-
       </div>
-      <footer>
-        <div class="container">
-          <p> <img src={logo} />Designed By
-            <a target="_blank" href="/https://github.com/PraveenaMallipeddi">Praveena</a>,
-            <a target="_blank" href="/https://github.com/Michael">Michael</a> and
-            <a target="_blank" href="/https://github.com/Bruno">Bruno</a>
-          </p>
-        </div>
-      </footer>
-
-
     </div>
   );
 }
