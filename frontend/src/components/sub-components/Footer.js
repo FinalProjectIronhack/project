@@ -4,19 +4,23 @@ function Footer(props) {
   return (
     <div>
       <footer>
-        <div class="container">
-          <p>
+        <div class="footerContainer">
+          <p className="pf">
             Designed By
-            <a target="_blank" href="https://github.com/PraveenaMallipeddi">
+            <a
+              className="af"
+              target="_blank"
+              href="https://github.com/PraveenaMallipeddi"
+            >
               Praveena
             </a>
             ,
-            <a target="_blank" href="https://github.com/Michael">
+            <a className="af" target="_blank" href="https://github.com/Michael">
               Michael
             </a>
             {"   "}
             and
-            <a target="_blank" href="https://github.com/Bruno">
+            <a className="af" target="_blank" href="https://github.com/Bruno">
               Bruno
             </a>
           </p>

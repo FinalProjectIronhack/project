@@ -49,13 +49,28 @@ nav {
 
   text-align: center;
 }
-footer {
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 50px;
+  height: 10vh;
 
   background-color: black;
   text-align: center;
 }
-
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.pf {
+  color: white;
+}
+.af {
+  color: rgb(252, 82, 0);
+}
 .header {
   display: flex;
   align-items: center;
@@ -80,7 +95,7 @@ footer {
   align-items: center;
   justify-content: space-around;
   margin: 10px;
-  font-family: fantasy;
+  /* font-family: fantasy; */
   color: black;
   align-content: center;
 }

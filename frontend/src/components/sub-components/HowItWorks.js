@@ -5,6 +5,7 @@ import steps from "../../Images/steps icon.png";
 import "./HowItWorks.css";
 import select from "../../Images/select.png";
 import running from "../../Images/running icon.png";
+import { Button } from "../button.jsx";
 
 function HowItWorks() {
   const ColoredLine = ({ color }) => (
@@ -20,7 +21,7 @@ function HowItWorks() {
   return (
     <div className="hiwd">
       <div className="body">
-        <div className="container">
+        <div className="containerHIW">
           <header className="hiwh"></header>
           <img className="hiwi" src={map} alt="womans team photo" />
           <h1> How it works </h1> <hr></hr>
@@ -44,7 +45,7 @@ function HowItWorks() {
           </p>
         </div>
         <hr></hr>
-        <div className="container">
+        <div className="containerHIW">
           <h3>Your First Step</h3>
           <img className="steps" src={steps} />
           <p>
@@ -54,10 +55,12 @@ function HowItWorks() {
             display the closest events, games, and players that match your
             parameters filtered by sport, game, and zip-code.
           </p>
-          <button className="hiwb">Find Player</button>
+          <Button buttonSize="button--large" className="hiwb">
+            Find Player
+          </Button>
         </div>
         <hr></hr>
-        <div className="container">
+        <div className="containerHIW">
           <h3> Select Your Players </h3>
           <img className="select" src={select} />
           <p>
@@ -69,10 +72,12 @@ function HowItWorks() {
             meet up if its not already specified. REMEMBER! Be safe, meet in
             public spaces, and never share personal information!{" "}
           </p>
-          <button className="hiwb">Messages</button>
+          <Button buttonSize="button--large" className="hiwb">
+            Messages
+          </Button>
         </div>
         <hr></hr>
-        <div className="container">
+        <div className="containerHIW">
           <h3>Play</h3>
           <img className="running" src={running} />
           <p>
