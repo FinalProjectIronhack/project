@@ -7,16 +7,16 @@ function Footer(props) {
         <div class="container">
           <p>
             Designed By
-            <a target="_blank" href="/https://github.com/PraveenaMallipeddi">
+            <a target="_blank" href="https://github.com/PraveenaMallipeddi">
               Praveena
             </a>
             ,
-            <a target="_blank" href="/https://github.com/Michael">
+            <a target="_blank" href="https://github.com/Michael">
               Michael
             </a>
             {"   "}
             and
-            <a target="_blank" href="/https://github.com/Bruno">
+            <a target="_blank" href="https://github.com/Bruno">
               Bruno
             </a>
           </p>
