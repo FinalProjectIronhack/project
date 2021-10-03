@@ -54,7 +54,7 @@ function HowItWorks() {
             display the closest events, games, and players that match your
             parameters filtered by sport, game, and zip-code.
           </p>
-          <button className="Messages">Find Player</button>
+          <button className="hiwb">Find Player</button>
         </div>
         <hr></hr>
         <div className="container">
@@ -69,7 +69,7 @@ function HowItWorks() {
             meet up if its not already specified. REMEMBER! Be safe, meet in
             public spaces, and never share personal information!{" "}
           </p>
-          <button className="Messages">Messages</button>
+          <button className="hiwb">Messages</button>
         </div>
         <hr></hr>
         <div className="container">

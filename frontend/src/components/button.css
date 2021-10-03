@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+:root {
+  --primary: rgb(252, 82, 0);
+  --black: black;
+}
+.btn {
+  font-family: "Iceberg", cursive;
+  font-weight: 400;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+btn:hover {
+  transform: translateY(-3px);
+}
+/* button colors and styles below*/
+.btn--primary--solid {
+  background-color: var(--primary);
+  color: var(--black);
+  border: none;
+}
+/* button sizes */
+
+.btn--medium {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.btn--large {
+  padding: 15px 30px;
+  font-size: 20px;
+}

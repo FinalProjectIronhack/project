@@ -53,10 +53,7 @@ function Header(props) {
           <Auth getUser={getUser} />
         )}
       </header>
-
-      <div className="mainimg">
-        <img src={Mainimg} alt="MainImage"></img>
-      </div>
+      <img className="mainImg" src={Mainimg} alt="MainImage"></img>
     </div>
   );
 }
