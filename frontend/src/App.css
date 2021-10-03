@@ -36,10 +36,12 @@ a {
   color: rgb(255, 98, 0);
 }
 img {
-  background-size: cover;
-  background-position: center;
-  /* width: 10vw;
-  height: 10vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
 }
 
 .button {
@@ -54,13 +56,13 @@ footer {
   background-color: black;
   text-align: center;
 }
-.mainimg {
+/* .mainimg {
   background-image: url("./Images/runreal.jpg");
   object-fit: cover;
   background-size: cover;
   background-position: center;
-  background-color: black;
-}
+  background-color: black; */
+/* } */
 .land {
   background-color: rgb(255, 98, 0);
   border: rgb(255, 98, 0) solid 1px;
