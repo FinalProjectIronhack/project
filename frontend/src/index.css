@@ -39,7 +39,6 @@ nav a:hover::before {
 
 nav a:hover {
   color: #fc5200;
-  box-shadow: 0 0 5px #fc5200;
   text-shadow: 0 0 5px #fc5200;
   transform: scale(1.4);
 }
