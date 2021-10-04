@@ -2,19 +2,22 @@ import React from "react";
 import { useEffect, useState } from "react";
 import actions from "../api";
 import UserDetails from "./UserDetails";
+import { Button } from "./button";
 function Profile(props) {
   // we need to connect with back end aoutes and front end API
   // display user infromation by grabbing google authentication info
   //using the header and authentication
   //useeffect
   const [profile, setProfile] = useState({});
-
+  const [showForm, setShowForm] = useState(false);
   useEffect(async () => {
     let res = await actions.getProfile();
     setProfile(res.data);
     console.log(res.data);
   }, []);
-
+  const edit = () => {
+    setShowForm(!showForm);
+  };
   const ShowProfile = () => {
     // return profile.map((userProfile) => {
     return (
@@ -37,8 +40,10 @@ function Profile(props) {
 
   return (
     <div>
+      <Button onClick={edit}> Edit Profile </Button>
+      {showForm ? <UserDetails /> : <></>}
+
       <ShowProfile />
-      <UserDetails />
     </div>
   );
 }
