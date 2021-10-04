@@ -18,14 +18,19 @@ function Profile(props) {
   const ShowProfile = () => {
     // return profile.map((userProfile) => {
     return (
-      <div key={profile._id}>
-        <h1> {profile.name}</h1>
+      <div className="profile" key={profile._id}>
+        <ul>
+          <h1> {profile.name}</h1>
 
-        <p>welcome to my page!</p>
-        <img src={profile.imageUrl} />
-        <p>{profile.zip}</p>
-        <p>{profile.sports}</p>
-        <hr></hr>
+          <h2>welcome to my page!</h2>
+          <img src={profile.imageUrl} />
+          <h3>About me: {profile.bio}</h3>
+          <hr></hr>
+
+          <h3>Sport Intrests: {profile.sports}</h3>
+          <h3>Zip-Code: {profile.zip}</h3>
+          <h3>Gender: {profile.gender}</h3>
+        </ul>
       </div>
     );
   };

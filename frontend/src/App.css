@@ -89,7 +89,11 @@ footer {
   flex-direction: row;
   margin-top: 20px;
 }
-
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .optionsContainer {
   display: flex;
   align-items: center;
