@@ -92,6 +92,23 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+.profile-card {
+  border: 1px solid black;
+  border-radius: 10%;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #bbbbbb;
+}
+
+.profile-card > img {
+  width: 100px;
+  border-radius: 50%;
+}
+
 .optionsContainer {
   display: flex;
   align-items: center;

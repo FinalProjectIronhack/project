@@ -11,7 +11,7 @@ const userSchema = new Schema(
     level: { type: Number, min: 1, max: 5 },
     gender: {
       type: String,
-      enum: ["M", "f", "other"],
+      enum: ["M", "F", "Other"],
     },
     zip: { type: Number, min: 0, max: 99999 },
 
