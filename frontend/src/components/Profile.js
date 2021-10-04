@@ -19,7 +19,6 @@ function Profile(props) {
     setShowForm(!showForm);
   };
   const ShowProfile = () => {
-    // return profile.map((userProfile) => {
     return (
       <div className="profile" key={profile._id}>
         <ul className="profile-card">
