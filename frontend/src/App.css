@@ -102,6 +102,7 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #bbbbbb;
+  word-break: break-all;
 }
 
 .profile-card > img {
