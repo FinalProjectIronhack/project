@@ -87,7 +87,7 @@ footer {
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
-  margin-top: 1px;
+  margin-top: 20px;
 }
 
 .optionsContainer {

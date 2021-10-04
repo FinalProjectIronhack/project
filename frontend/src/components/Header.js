@@ -5,6 +5,7 @@ import TheContext from "../TheContext";
 import Auth from "./Auth";
 import Mainimg from "../Images/runreal.jpg";
 import "../App.css";
+import { Button } from "./button";
 
 function Header(props) {
   const logOut = () => {
@@ -47,7 +48,7 @@ function Header(props) {
           <div id="auth">
             {/* <img src={user.imageUrl} /> */}
             <h3>{user?.name}</h3>
-            <button onClick={logOut}>Log Out</button>
+            <Button onClick={logOut}>Log Out</Button>
           </div>
         ) : (
           <Auth getUser={getUser} />
