@@ -24,6 +24,9 @@ const actions = {
   getQuestions: async () => {
     return await axios.get(`${SERVER_URL}/all-questions`, createHeader());
   },
+  getPlayers: async () => {
+    return await axios.get(`${SERVER_URL}/all-players`, createHeader());
+  },
   getProfile: async () => {
     return await axios.get(`${SERVER_URL}/my-profile`, createHeader());
   },

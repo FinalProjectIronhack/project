@@ -16,6 +16,7 @@ import SignUp from "./components/sub-components/SignUp";
 import Faq from "./components/sub-components/FAQ";
 import Profile from "./components/Profile";
 import Footer from "./components/sub-components/Footer";
+import FindPlayer from "./components/sub-components/FindPlayer";
 function App() {
   const [user, setUser] = useState({});
 
@@ -45,8 +46,8 @@ function App() {
         />
         <Route
           exact
-          path="/all-posts"
-          render={(props) => <AllPosts user={user} {...props} />}
+          path="/all-players"
+          render={(props) => <FindPlayer user={user} {...props} />}
         />
         <Route
           exact

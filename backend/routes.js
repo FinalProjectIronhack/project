@@ -71,7 +71,11 @@ router.get("/get-user", authorize, async (req, res) => {
   let user = await User.findById(res.locals.user._id);
   res.json(user);
 });
-
+router.get("/all-players", authorize, async (req, res) => {
+  let allPlayers = await User.find();
+  console.log(allPlayers);
+  res.json(allPlayers);
+});
 router.post("/authenticate", async (req, res) => {
   let user = await User.findOne({ email: req.body.email });
   if (!user) {

@@ -28,7 +28,7 @@ function Header(props) {
             <Link className="links" to="/">
               Home
             </Link>
-            <Link className="links" to="/all-posts">
+            <Link className="links" to="/all-players">
               FindAPlayer
             </Link>
             {user?.name ? (
