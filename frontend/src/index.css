@@ -32,8 +32,16 @@ nav a {
   text-align: center;
 }
 
+nav a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #fc5200;
+}
+
 nav a:hover {
-  background: rgb(206, 150, 29);
+  color: #fc5200;
+  box-shadow: 0 0 5px #fc5200;
+  text-shadow: 0 0 5px #fc5200;
+  transform: scale(1.4);
 }
 
 #auth {

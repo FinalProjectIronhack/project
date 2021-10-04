@@ -7,21 +7,29 @@ function Footer(props) {
         <img src={logo} />
         <div class="footerContainer">
           <p className="pf">
-            Designed By
+            Designed By{" "}
             <a
               className="af"
               target="_blank"
-              href="https://github.com/PraveenaMallipeddi"
+              href="https://github.com/PraveenaMaliipeddi"
             >
               Praveena
             </a>
-            ,
-            <a className="af" target="_blank" href="https://github.com/Michael">
+            ,{" "}
+            <a
+              className="af"
+              target="_blank"
+              href="https://github.com/Michaelscodecollection"
+            >
               Michael
             </a>
             {"   "}
-            and
-            <a className="af" target="_blank" href="https://github.com/Bruno">
+            and{" "}
+            <a
+              className="af"
+              target="_blank"
+              href="https://github.com/brunobarbagelata"
+            >
               Bruno
             </a>
           </p>
