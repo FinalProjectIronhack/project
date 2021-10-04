@@ -1,9 +1,10 @@
 import React from "react";
-
+import logo from "../../Images/FinalProLogoBro.png";
 function Footer(props) {
   return (
     <div>
       <footer>
+        <img src={logo} />
         <div class="footerContainer">
           <p className="pf">
             Designed By
