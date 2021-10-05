@@ -9,13 +9,13 @@ function Faq({ user }) {
   let [name, setName] = useState("");
   let [question, setQuestion] = useState("");
   let [questions, setQuestions] = useState([]);
+  let [answer, setAnswer] = useState(false);
+
   useEffect(async () => {
     let res = await actions.getQuestions();
 
     setQuestions(res.data);
   }, []);
-
-  console.log(user);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,13 +32,19 @@ function Faq({ user }) {
 
   const ShowQuestions = () => {
     return questions.map((q) => {
-      console.log(q);
       return (
-        <div className="questions" key={q._id}>
-          <h3>
-            {q.name}: <span className="quest">{q.question}</span>
-          </h3>
-          <p>{q.answer}</p>
+        <div className="queans">
+          <div className="questions" key={q._id}>
+            <h3>
+              {q.name}: <span className="quest">{q.question}</span>
+            </h3>
+            <p>{q.answer}</p>
+          </div>
+          {user?.admin ? (
+            <div>
+              <Button onClick={() => setAnswer(!answer)}>Answer</Button>
+            </div>
+          ) : null}
         </div>
       );
     });
@@ -50,6 +56,7 @@ function Faq({ user }) {
       <h2 className="faq-title">Frequently Asked Questions</h2>
 
       <ShowQuestions />
+      {answer ? <p>hello</p> : null}
 
       <h3 className="havent">
         Haven't found an answer?
