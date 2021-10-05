@@ -6,7 +6,6 @@ const questionSchema = new Schema(
     name: String,
     question: String,
     answer: String,
-    userId: { type: Schema.Types.ObjectId, ref: "User" },
   },
   { timestamps: true }
 );

@@ -128,7 +128,8 @@ footer {
 }
 
 .questions {
-  margin: 2rem 25vw;
+  width: 40vw;
+  margin: 1rem;
   padding: 2rem;
   border: 1px solid black;
   border-radius: 10px;
@@ -140,6 +141,12 @@ footer {
     rgba(252, 170, 0, 1) 50%,
     rgba(252, 82, 0, 1) 100%
   );
+}
+
+.queans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .questions > p {
