@@ -19,15 +19,16 @@ const actions = {
       `${SERVER_URL}/questions`,
       { name, question },
       createHeader()
+      // here we create our
     );
   },
   getQuestions: async () => {
     return await axios.get(`${SERVER_URL}/all-questions`, createHeader());
   },
-  getPlayers: async ({ zip, level, agemin, agemax, gender }) => {
+  getPlayers: async (player) => {
     return await axios.post(
       `${SERVER_URL}/all-players`,
-      { zip, level, agemin, agemax, gender },
+      player,
       createHeader()
     );
   },
@@ -48,7 +49,6 @@ const actions = {
   getAllPosts: async () => {
     return await axios.get(`${SERVER_URL}/all-posts`, createHeader());
   },
-
   createNewPost: async ({ title, post }) => {
     return await axios.post(
       `${SERVER_URL}/new-post`,

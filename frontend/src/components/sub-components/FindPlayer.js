@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import actions from "../../api";
 import UserDetails from "../UserDetails";
+import { Button } from "../button";
 
 function FindPlayer() {
   const [players, setPlayers] = useState([]);
@@ -9,7 +10,7 @@ function FindPlayer() {
   useEffect(async () => {
     let res = await actions.getPlayers({});
     setPlayers(res.data);
-    console.log(res.data);
+    console.log(res.data.level);
   }, []);
 
   const searchPlayers = (e) => {
@@ -17,18 +18,18 @@ function FindPlayer() {
 
     const zip = e.target.city_zip.value;
     const level = e.target.skill_level.value;
-    const agemin = e.target.agemin.value;
-    const agemax = e.target.agemax.value;
+    // const agemin = e.target.agemin.value;
+    // const agemax = e.target.agemax.value;
     const gender = e.target.gender.value;
-    console.log(zip, level, agemin, agemax, gender);
+    console.log(zip, level, gender);
 
-    retrievePlayers(zip, level, agemin, agemax, gender);
+    retrievePlayers(clean({ zip, level, gender }));
   };
 
-  const retrievePlayers = async (zip, level, agemin, agemax, gender) => {
-    let res = await actions.getPlayers({ zip, level, agemin, agemax, gender });
-    console.log(res);
-    console.log(res.data[0]);
+  const retrievePlayers = async (player) => {
+    let res = await actions.getPlayers(player);
+    setPlayers(res.data);
+    console.log(res.data.zip);
   };
   const ShowProfile = () => {
     return players.map((player) => {
@@ -41,6 +42,7 @@ function FindPlayer() {
             <h3>My Sports: {player.sports}</h3>
             <h3>Zip-Code: {player.zip}</h3>
             <h3>Gender: {player.gender}</h3>
+            <Button>Send Message</Button>
           </ul>
         </div>
       );
@@ -54,10 +56,10 @@ function FindPlayer() {
         <input type="number" id="city_zip" placeholder="Enter your Zip code" />
         <small>This field is required and cannot be empty</small>
         <br />
-        <label>Age</label>
+        {/* <label>Age</label>
         <input type="number" id="agemin" placeholder="Enter age from" />
         <input type="number" id="agemax" placeholder="Enter age to" />
-        <br />
+        <br /> */}
         <select name="skill_level" id="skill_level">
           <option value="" defaultValue="">
             All levels
@@ -87,3 +89,12 @@ function FindPlayer() {
 }
 
 export default FindPlayer;
+
+function clean(obj) {
+  for (var propName in obj) {
+    if (!obj[propName]) {
+      delete obj[propName];
+    }
+  }
+  return obj;
+}
