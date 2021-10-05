@@ -42,7 +42,7 @@ function Faq({ user }) {
           </div>
           {user?.admin ? (
             <div>
-              <Button onClick={() => setAnswer(!answer)}>Answer</Button>
+              <Button onClick={() => setAnswer(!answer)}>Edit answer</Button>
             </div>
           ) : null}
         </div>
