@@ -7,11 +7,29 @@ function FindPlayer() {
   const [players, setPlayers] = useState([]);
 
   useEffect(async () => {
-    let res = await actions.getPlayers();
+    let res = await actions.getPlayers({});
     setPlayers(res.data);
     console.log(res.data);
   }, []);
 
+  const searchPlayers = (e) => {
+    e.preventDefault();
+
+    const zip = e.target.city_zip.value;
+    const level = e.target.skill_level.value;
+    const agemin = e.target.agemin.value;
+    const agemax = e.target.agemax.value;
+    const gender = e.target.gender.value;
+    console.log(zip, level, agemin, agemax, gender);
+
+    retrievePlayers(zip, level, agemin, agemax, gender);
+  };
+
+  const retrievePlayers = async (zip, level, agemin, agemax, gender) => {
+    let res = await actions.getPlayers({ zip, level, agemin, agemax, gender });
+    console.log(res);
+    console.log(res.data[0]);
+  };
   const ShowProfile = () => {
     return players.map((player) => {
       return (
@@ -31,6 +49,38 @@ function FindPlayer() {
 
   return (
     <div>
+      <form id="search-form" onSubmit={searchPlayers}>
+        <label>ZIP</label>
+        <input type="number" id="city_zip" placeholder="Enter your Zip code" />
+        <small>This field is required and cannot be empty</small>
+        <br />
+        <label>Age</label>
+        <input type="number" id="agemin" placeholder="Enter age from" />
+        <input type="number" id="agemax" placeholder="Enter age to" />
+        <br />
+        <select name="skill_level" id="skill_level">
+          <option value="" defaultValue="">
+            All levels
+          </option>
+
+          <option value="1">1. Beginner</option>
+          <option value="2">2. Advanced Beginner</option>
+          <option value="3">3. Intermediate</option>
+          <option value="4">4. Competitor</option>
+          <option value="5">5. Expert</option>
+        </select>
+        <label>Level</label> <br />
+        <select name="gender" id="gender">
+          <option value="" selected="">
+            Any
+          </option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <label>Gender</label> <br />
+        <button type="submit"> SEARCH</button>
+      </form>
       <ShowProfile />
     </div>
   );

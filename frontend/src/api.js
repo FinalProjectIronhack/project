@@ -24,8 +24,12 @@ const actions = {
   getQuestions: async () => {
     return await axios.get(`${SERVER_URL}/all-questions`, createHeader());
   },
-  getPlayers: async () => {
-    return await axios.get(`${SERVER_URL}/all-players`, createHeader());
+  getPlayers: async ({ zip, level, agemin, agemax, gender }) => {
+    return await axios.post(
+      `${SERVER_URL}/all-players`,
+      { zip, level, agemin, agemax, gender },
+      createHeader()
+    );
   },
   getProfile: async () => {
     return await axios.get(`${SERVER_URL}/my-profile`, createHeader());
@@ -44,6 +48,7 @@ const actions = {
   getAllPosts: async () => {
     return await axios.get(`${SERVER_URL}/all-posts`, createHeader());
   },
+
   createNewPost: async ({ title, post }) => {
     return await axios.post(
       `${SERVER_URL}/new-post`,
