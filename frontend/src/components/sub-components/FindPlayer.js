@@ -79,7 +79,8 @@ function FindPlayer() {
           <option value="Other">Other</option>
         </select>
         <label>Gender</label> <br />
-        <button type="submit"> SEARCH</button>
+        <button type="submit"> SEARCH</button><br />
+        <button class="button" id="button-invite">CONTACT TO PLAY</button>
       </form>
       <ShowProfile />
     </div>
