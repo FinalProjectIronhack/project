@@ -24,17 +24,16 @@ router.get("/all-questions", authorize, async (req, res) => {
   console.log(res.locals.user);
   let allQuestions = null;
   if (res.locals.user.admin) {
-    allQuestions = await Question.find();
+    allQuestions = await Question.find().populate("userId");
   } else {
     allQuestions = await Question.find({ show: true });
   }
+  console.log(allQuestions);
   res.json(allQuestions);
 });
 
 router.get("/my-posts", authorize, async (req, res) => {
-  let allPosts = await Post.find({ userId: res.locals.user._id }).populate(
-    "userId"
-  );
+  let allPosts = await Post.find({ userId: res.locals.user._id });
   console.log(res.locals.user);
   res.json(allPosts);
   // we need posts, userId, then we need to match the userId with our current user and only show the current users post. no filters

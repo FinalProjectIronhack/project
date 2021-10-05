@@ -66,7 +66,11 @@ function App() {
         />
         <Route exact path="/how-does-it-work" component={HowItWorks} />
         <Route exact path="/sign-up" component={SignUp} />
-        <Route exact path="/FAQ" component={Faq} />
+        <Route
+          exact
+          path="/FAQ"
+          render={(props) => <Faq user={user} {...props} />}
+        />
         {/* <Route exact path="/find-players" component={FindPlayer} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/messenger" component={Messenger} /> */}
