@@ -4,16 +4,18 @@ import actions from "../../api";
 import "../../App.css";
 import { Button } from "../button";
 
-function Faq() {
+function Faq({ user }) {
   let [ask, setAsk] = useState(false);
   let [name, setName] = useState("");
   let [question, setQuestion] = useState("");
   let [questions, setQuestions] = useState([]);
   useEffect(async () => {
     let res = await actions.getQuestions();
-    console.log(res.data);
+
     setQuestions(res.data);
   }, []);
+
+  console.log(user);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,8 +32,9 @@ function Faq() {
 
   const ShowQuestions = () => {
     return questions.map((q) => {
+      console.log(q);
       return (
-        <div className="questions">
+        <div className="questions" key={q._id}>
           <h3>
             {q.name}: <span className="quest">{q.question}</span>
           </h3>
@@ -49,7 +52,9 @@ function Faq() {
       <ShowQuestions />
 
       <h3 className="havent">
-        Haven't found an answer?{" "}
+        Haven't found an answer?
+        <br />
+        <br />
         <Button onClick={() => setAsk(!ask)}>Ask your own question</Button>
       </h3>
       {ask ? (
