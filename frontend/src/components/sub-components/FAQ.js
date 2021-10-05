@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import actions from "../../api";
+import "../../App.css";
+import { Button } from "../button";
 
 function Faq() {
   let [ask, setAsk] = useState(false);
@@ -29,9 +31,10 @@ function Faq() {
   const ShowQuestions = () => {
     return questions.map((q) => {
       return (
-        <div>
-          <h3>{q.name}</h3>
-          <h4>{q.question}</h4>
+        <div className="questions">
+          <h3>
+            {q.name}: <span className="quest">{q.question}</span>
+          </h3>
           <p>{q.answer}</p>
         </div>
       );
@@ -41,28 +44,36 @@ function Faq() {
 
   return (
     <div>
-      <h1>Frequently Asked Questions</h1>
+      <h2 className="faq-title">Frequently Asked Questions</h2>
 
       <ShowQuestions />
 
-      <h3>
+      <h3 className="havent">
         Haven't found an answer?{" "}
-        <button onClick={() => setAsk(!ask)}>Ask your own question</button>
+        <Button onClick={() => setAsk(!ask)}>Ask your own question</Button>
       </h3>
       {ask ? (
-        <form onSubmit={handleSubmit}>
+        <form className="havent" onSubmit={handleSubmit}>
           <input
+            size="50"
             onChange={(e) => setName(e.target.value)}
             type="text"
             placeholder="Your name"
           />
-          <br></br>
+          <br />
+          <br />
           <textarea
+            rows="4"
+            cols="50"
             onChange={(e) => setQuestion(e.target.value)}
             placeholder="Your question"
           />
-          <button>Send</button> &nbsp;
-          <button type="reset">Reset</button>
+          <br />
+          <Button>Send</Button> &nbsp;
+          <Button type="reset">Reset</Button>
+          <br />
+          <br />
+          <br />
         </form>
       ) : null}
     </div>

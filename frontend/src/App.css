@@ -120,6 +120,44 @@ footer {
   align-content: center;
 }
 
+.faq-title {
+  font-family: "Montserrat", sans-serif;
+  color: #fc5200;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.questions {
+  margin: 2rem 25vw;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: "Iceberg", cursive;
+  background: rgb(170, 170, 170);
+  background: linear-gradient(
+    90deg,
+    rgba(204, 204, 204, 1) 0%,
+    rgba(252, 170, 0, 1) 50%,
+    rgba(252, 82, 0, 1) 100%
+  );
+}
+
+.questions > p {
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.quest {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.havent {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+}
+
 .logodiv {
   display: flex;
   flex-direction: row;
