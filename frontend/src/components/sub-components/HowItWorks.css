@@ -23,6 +23,12 @@ hr {
   flex-direction: column;
   background-color: #e5e5e5;
 }
+.hiwhr {
+  width: 50vw;
+}
+.hiwp {
+  width: 50vw;
+}
 .body {
   background-color: white;
   margin-left: 200px;
