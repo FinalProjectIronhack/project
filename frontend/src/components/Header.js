@@ -36,7 +36,7 @@ function Header(props) {
                 <Link className="links" to="/my-profile">
                   MyProfile
                 </Link>
-                <Link className="links" to="/profile">
+                <Link className="links" to="/Messenger">
                   Messenges
                 </Link>
               </>

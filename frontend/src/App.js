@@ -5,13 +5,13 @@ import { Link, Route, Switch } from "react-router-dom";
 import AllPosts from "./components/AllPosts";
 import NewPost from "./components/NewPost";
 import SportHome from "./components/SportHome";
-import SportProfile from "./components/SportProfile";
+
 import Header from "./components/Header";
 import TheContext from "./TheContext";
 import actions from "./api";
 import MyPosts from "./components/MyPosts";
 import HowItWorks from "./components/sub-components/HowItWorks";
-import SportMessenger from "./components/SportMessenger";
+import Messenger from "./components/Messenger";
 import SignUp from "./components/sub-components/SignUp";
 import Faq from "./components/sub-components/FAQ";
 import Profile from "./components/Profile";
@@ -56,8 +56,8 @@ function App() {
         />
         <Route
           exact
-          path="/Sportprofile"
-          render={(props) => <SportProfile user={user} {...props} />}
+          path="/Messenger"
+          render={(props) => <Messenger user={user} {...props} />}
         />
         <Route
           exact
@@ -72,8 +72,8 @@ function App() {
           render={(props) => <Faq user={user} {...props} />}
         />
         {/* <Route exact path="/find-players" component={FindPlayer} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/messenger" component={Messenger} /> */}
+        <Route exact path="/login" component={Login} /> */}
+
       </Switch>
       <Footer />
     </TheContext.Provider>

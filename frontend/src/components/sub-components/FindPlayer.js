@@ -31,6 +31,7 @@ function FindPlayer() {
     setPlayers(res.data);
     console.log(res.data.zip);
   };
+
   const ShowProfile = () => {
     return players.map((player) => {
       return (
@@ -93,6 +94,9 @@ export default FindPlayer;
 
 function clean(obj) {
   for (var propName in obj) {
+
+    console.log(obj);
+
     if (!obj[propName]) {
       delete obj[propName];
     }

@@ -7,7 +7,7 @@ import FindPlayer from "./sub-components/FindPlayer";
 import FAQ from "./sub-components/FAQ";
 import SignUp from "./sub-components/SignUp";
 import HowItWorks from "./sub-components/HowItWorks";
-import Messenger from "./SportMessenger";
+import Messenger from "./Messenger";
 import { Button } from "./button";
 import mock from "../Images/mock.PNG";
 

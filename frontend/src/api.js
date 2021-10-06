@@ -32,6 +32,16 @@ const actions = {
       createHeader()
     );
   },
+
+  getMessages: async (clickedOn) => {
+    return await axios.get(
+      `${SERVER_URL}/Messenger`,
+      clickedOn,
+      createHeader()
+    );
+
+  },
+
   getProfile: async () => {
     return await axios.get(`${SERVER_URL}/my-profile`, createHeader());
   },

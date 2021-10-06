@@ -5,6 +5,7 @@ const User = require("./models/User");
 const FAQ = require("./models/FreqQuestions");
 const Question = require("./models/Question");
 const jwt = require("jsonwebtoken");
+const Messages = require("./models/Messages");
 
 //http://localhost:5000/api/all-posts GET
 router.get("/all-posts", async (req, res) => {
@@ -31,6 +32,15 @@ router.get("/all-questions", authorize, async (req, res) => {
   console.log(allQuestions);
   res.json(allQuestions);
 });
+
+router.get("/Messenger", authorize, async (req, res) => {
+  let messages = await Messages.find();
+  console.log(messages);
+});
+
+
+
+
 
 router.get("/my-posts", authorize, async (req, res) => {
   let allPosts = await Post.find({ userId: res.locals.user._id });
