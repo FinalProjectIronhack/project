@@ -10,7 +10,7 @@ function UserDetails(props) {
 
   let handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(gender);
+    console.log("1", gender);
     let res = await actions.createUserDetails({
       bio,
       sports,
@@ -21,6 +21,7 @@ function UserDetails(props) {
     setSports(res.data.sports);
     setGender(res.data.gender);
     setZip(res.data.zip);
+    console.log("2", gender);
   };
 
   return (
@@ -38,17 +39,24 @@ function UserDetails(props) {
           type="text"
           placeholder="enter zipcode"
         ></input>
-        Gender
-        <input
+        <label>Gender</label>
+        <select
+          name="gender"
+          id="gender"
           onChange={(e) => setGender(e.target.value)}
-          type="text"
-          placeholder="enter gender"
-        ></input>
+        >
+          <option value="" selected="">
+            Any
+          </option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="Other">Other</option>
+        </select>
         Sport Intrests
         <input
           onChange={(e) => setSports(e.target.value)}
           type="text"
-          placeholder="enter sport intrests"
+          placeholder="enter sport interests"
         ></input>
         <button>Submit</button>
       </form>

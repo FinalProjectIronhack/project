@@ -19,6 +19,19 @@ router.post("/questions", async (req, res) => {
   // here we create our new question and the result us added to res.json.
 });
 
+//http://localhost:5000/api/questions POST To answer question
+router.post("/update-question", authorize, async (req, res) => {
+  let question = await Question.findByIdAndUpdate(
+    req.body.id,
+    {
+      answer: req.body.answer,
+      show: req.body.showQ,
+    },
+    { new: true }
+  );
+  res.json(question);
+});
+
 //http://localhost:5000/api/show-questions GET
 router.get("/all-questions", authorize, async (req, res) => {
   console.log(res.locals.user);
