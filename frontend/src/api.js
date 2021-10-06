@@ -25,11 +25,20 @@ const actions = {
   getQuestions: async () => {
     return await axios.get(`${SERVER_URL}/all-questions`, createHeader());
   },
+  updateQuestion: async (answer) => {
+    return await axios.post(
+      `${SERVER_URL}/update-question`,
+      answer,
+      createHeader()
+      // here we create our
+    );
+  },
   getPlayers: async (player) => {
     return await axios.post(
       `${SERVER_URL}/all-players`,
       player,
       createHeader()
+      //when we call getPlayers in a function, we are posting player(however it is defined or set) to all-players/ players is a single argument
     );
   },
 

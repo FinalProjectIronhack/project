@@ -20,6 +20,11 @@ router.post("/questions", async (req, res) => {
   // here we create our new question and the result us added to res.json.
 });
 
+//http://localhost:5000/api/questions POST To answer question
+router.post("/update-question", authorize, async (req, res) => {
+  console.log(req.body);
+});
+
 //http://localhost:5000/api/show-questions GET
 router.get("/all-questions", authorize, async (req, res) => {
   console.log(res.locals.user);
@@ -85,10 +90,7 @@ router.post("/all-players", authorize, async (req, res) => {
   let allPlayers = await User.find(req.body);
   // req.body= inputs of user to back end ==> they req a body of information, we compare it to the results the computer finds
 
-  // we are going to create a query search. i need to fully understand what req.query is.
-  // if the query search matches the parameters of the user, we want to display thjat user.
-  // req.query.data === res.body.data
-
+  //here we are asking the computer to find whatever was inputted by the user(req.body) we place all that was found in all players. bewlow req.body is only representing what was inputted(the zipcode) and allPlayers.length represents how many players the computer found matching those parameters.
   console.log(req.body, allPlayers.length);
   res.json(allPlayers);
 });

@@ -24,14 +24,14 @@ function HowItWorks() {
         <div className="containerHIW">
           <header className="hiwh"></header>
           <img className="hiwi" src={map} alt="womans team photo" />
-          <h1> How it works </h1> <hr></hr>
+          <h1> How it works </h1> <hr className="hiwhr"></hr>
           <br></br>
           <h1>
             <strong>Our Mission</strong>
           </h1>
           <img className="mission" src={mission} />
           <p>We work hard so that you can play hard.</p>
-          <p>
+          <p className="hiwp">
             Here at play sports, we believe in the power of play. for thousands
             of years sports have brought people together. From the coliseums of
             Rome, the cricket fields of India, the Tlachtli fields of Aztecs
@@ -44,11 +44,11 @@ function HowItWorks() {
             near you and connect with your next teammate by signing up today!
           </p>
         </div>
-        <hr></hr>
+        <hr className="hiwhr"></hr>
         <div className="containerHIW">
           <h3>Your First Step</h3>
           <img className="steps" src={steps} />
-          <p>
+          <p className="hiwp">
             Sign up with you google account and begin the process of finding
             your teammates. simply login and use our search engine to find local
             players and teams near you. Our easy to use search engine will
@@ -59,11 +59,11 @@ function HowItWorks() {
             Find Player
           </Button>
         </div>
-        <hr></hr>
+        <hr className="hiwhr"></hr>
         <div className="containerHIW">
           <h3> Select Your Players </h3>
           <img className="select" src={select} />
-          <p>
+          <p className="hiwp">
             {" "}
             Now comes the fun part. with access to hundreds of players near you,
             now all you have to do is connect. view the profile of the players
@@ -76,11 +76,11 @@ function HowItWorks() {
             Messages
           </Button>
         </div>
-        <hr></hr>
+        <hr className="hiwhr"></hr>
         <div className="containerHIW">
           <h3>Play</h3>
           <img className="running" src={running} />
-          <p>
+          <p className="hiwp">
             {" "}
             Once you have logged in, filled out your search parameters, located
             a player, team, or event to play, and coordinated a time to meet,

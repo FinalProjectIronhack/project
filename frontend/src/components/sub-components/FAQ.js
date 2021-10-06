@@ -30,6 +30,15 @@ function Faq({ user }) {
     e.target[1].value = "";
   };
 
+  const handleAnswer = (id) => async (e) => {
+    e.preventDefault();
+    const answer = e.target.answer.value;
+    const showQ = e.target.show.value === "true" ? true : false;
+    console.log(showQ, answer, id);
+    let res = await actions.updateQuestion({ answer, showQ, id });
+    console.log(res.data);
+  };
+
   const ShowQuestions = () => {
     return questions.map((q) => {
       return (
@@ -41,9 +50,23 @@ function Faq({ user }) {
             <p>{q.answer}</p>
           </div>
           {user?.admin ? (
-            <div>
-              <Button onClick={() => setAnswer(!answer)}>Edit answer</Button>
-            </div>
+            <form onSubmit={handleAnswer(q._id)}>
+              <label for="answer">Edit answer</label>
+              <br />
+              <textarea id="answer" name="answer" rows="4" cols="50"></textarea>
+              <br />
+              <label>Post in general FAQ?</label>{" "}
+              <select name="show" id="show">
+                <option value="true" defaultValue="">
+                  Yes
+                </option>
+                <option value="false">No</option>
+              </select>
+              <br />
+              <Button type="submit" value="Submit">
+                Post
+              </Button>
+            </form>
           ) : null}
         </div>
       );
