@@ -102,3 +102,7 @@ function clean(obj) {
 }
 // here we are creating our clean function. this will clean the resulting json of any
 // obj not containing the patameters we passed through.
+
+{
+  /* <Button buttonSize="btn--medium" /> */
+}
