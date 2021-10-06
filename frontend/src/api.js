@@ -38,6 +38,7 @@ const actions = {
       `${SERVER_URL}/all-players`,
       player,
       createHeader()
+      //when we call getPlayers in a function, we are posting player(however it is defined or set) to all-players/ players is a single argument
     );
   },
   getProfile: async () => {

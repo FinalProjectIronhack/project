@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import actions from "../../api";
 import UserDetails from "../UserDetails";
 import { Button } from "../button";
-
+import "../../App.css";
 function FindPlayer() {
   const [players, setPlayers] = useState([]);
 
@@ -24,6 +24,11 @@ function FindPlayer() {
     console.log(zip, level, gender);
 
     retrievePlayers(clean({ zip, level, gender }));
+    // zip, level, and gender are set at whatever is inputted by the user.
+    // retrievePlayers gets passed in an object. we create our result which is =
+    // to whatever we get back from getPlayers, which in this case is the single obj with
+    // our zip, level, and gender values. we setPlayers to res.data, which will be
+    // the resulting json from get players. we retrievePlayers(and we clean the data of any objs that do not contain the value. )
   };
 
   const retrievePlayers = async (player) => {
@@ -34,14 +39,17 @@ function FindPlayer() {
   const ShowProfile = () => {
     return players.map((player) => {
       return (
-        <div className="profile" key={player._id}>
-          <ul className="profile-card">
+        <div className="player" key={player._id}>
+          <ul className="player-card">
             <img src={player.imageUrl} />
-            <h2> {player.name}</h2>
-            <h3>{player.bio}</h3>
-            <h3>My Sports: {player.sports}</h3>
-            <h3>Zip-Code: {player.zip}</h3>
-            <h3>Gender: {player.gender}</h3>
+            <hr className="profilehr"></hr>
+            <div className="detail-container">
+              <h2> {player.name}</h2>
+              <h3>{player.bio}</h3>
+              <h3>My Sports: {player.sports}</h3>
+              <h3>Zip-Code: {player.zip}</h3>
+              <h3>Gender: {player.gender}</h3>
+            </div>
             <Button>Send Message</Button>
           </ul>
         </div>
@@ -83,7 +91,9 @@ function FindPlayer() {
         <label>Gender</label> <br />
         <button type="submit"> SEARCH</button>
       </form>
-      <ShowProfile />
+      <div className="profilesContainer">
+        <ShowProfile />
+      </div>
     </div>
   );
 }
@@ -92,9 +102,16 @@ export default FindPlayer;
 
 function clean(obj) {
   for (var propName in obj) {
+    // we creat a for loop with the variable propName. the for loop is looking for
+    //if the propName is found in the obj. if found
     if (!obj[propName]) {
+      // if the obj does not have the parameter
       delete obj[propName];
+      // delete the obj from the result
     }
   }
   return obj;
+  // return remaining result
 }
+// here we are creating our clean function. this will clean the resulting json of any
+// obj not containing the patameters we passed through.
