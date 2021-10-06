@@ -131,11 +131,14 @@ function authorize(req, res, next) {
 var nodemailer = require("nodemailer");
 const { Router } = require("express");
 
+//playsports.netlify.app@gmail.com
+//PlaySports2021!
+
 var transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "mikimikenazboi@gmail.com",
-    pass: "Andrew0414!",
+    user: "playsports.netlify.app@gmail.com",
+    pass: "PlaySports2021!",
   },
 });
 

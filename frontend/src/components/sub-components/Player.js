@@ -15,8 +15,6 @@ function Player({ player }) {
       to: player.email,
       text: post,
     });
-
-    console.log(user.email, player.email, post);
   };
   return (
     <div className="player fpc" key={player._id}>
