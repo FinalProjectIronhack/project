@@ -19,10 +19,9 @@ router.post("/questions", async (req, res) => {
   // here we create our new question and the result us added to res.json.
 });
 
-//http://localhost:5000/api/questions POST To manage questions
+//http://localhost:5000/api/questions POST To answer question
 router.post("/update-question", authorize, async (req, res) => {
   console.log(req.body);
-  // here we create our new question and the result us added to res.json.
 });
 
 //http://localhost:5000/api/show-questions GET

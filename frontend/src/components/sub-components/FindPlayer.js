@@ -62,12 +62,13 @@ function FindPlayer() {
       <form id="search-form" onSubmit={searchPlayers}>
         <label>ZIP</label>
         <input type="number" id="city_zip" placeholder="Enter your Zip code" />
-        <small>This field is required and cannot be empty</small>
+        {/* <small>This field is required and cannot be empty</small> */}
         <br />
         {/* <label>Age</label>
         <input type="number" id="agemin" placeholder="Enter age from" />
         <input type="number" id="agemax" placeholder="Enter age to" />
         <br /> */}
+        <label>Level</label> <br />
         <select name="skill_level" id="skill_level">
           <option value="" defaultValue="">
             All levels
@@ -79,7 +80,7 @@ function FindPlayer() {
           <option value="4">4. Competitor</option>
           <option value="5">5. Expert</option>
         </select>
-        <label>Level</label> <br />
+        <label>Gender</label> <br />
         <select name="gender" id="gender">
           <option value="" selected="">
             Any
@@ -88,7 +89,7 @@ function FindPlayer() {
           <option value="F">Female</option>
           <option value="Other">Other</option>
         </select>
-        <label>Gender</label> <br />
+        <p>&nbsp;</p>
         <button type="submit"> SEARCH</button>
       </form>
       <div className="profilesContainer">
