@@ -1,4 +1,5 @@
 import React from "react";
+import Player from "./Player";
 import { useEffect, useState } from "react";
 import actions from "../../api";
 import UserDetails from "../UserDetails";
@@ -38,23 +39,7 @@ function FindPlayer() {
   };
   const ShowProfile = () => {
     return players.map((player) => {
-      return (
-        <div className="player" key={player._id}>
-          <ul className="player-card">
-            <img src={player.imageUrl} />
-            <hr className="profilehr"></hr>
-            <div className="detail-container">
-              <h2> {player.name}</h2>
-              <h3>{player.bio}</h3>
-              <h3>My Sports: {player.sports}</h3>
-              <h3>Level: {player.level}</h3>
-              <h3>Zip-Code: {player.zip}</h3>
-              <h3>Gender: {player.gender}</h3>
-            </div>
-            <Button>Send Message</Button>
-          </ul>
-        </div>
-      );
+      return <Player player={player} />;
     });
   };
 
