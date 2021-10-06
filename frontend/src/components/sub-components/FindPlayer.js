@@ -47,6 +47,7 @@ function FindPlayer() {
               <h2> {player.name}</h2>
               <h3>{player.bio}</h3>
               <h3>My Sports: {player.sports}</h3>
+              <h3>Level: {player.level}</h3>
               <h3>Zip-Code: {player.zip}</h3>
               <h3>Gender: {player.gender}</h3>
             </div>
@@ -74,11 +75,11 @@ function FindPlayer() {
             All levels
           </option>
 
-          <option value="1">1. Beginner</option>
-          <option value="2">2. Advanced Beginner</option>
-          <option value="3">3. Intermediate</option>
-          <option value="4">4. Competitor</option>
-          <option value="5">5. Expert</option>
+          <option value="1. Beginner">1. Beginner</option>
+          <option value="2. Advanced Beginner">2. Advanced Beginner</option>
+          <option value="3. Intermediate">3. Intermediate</option>
+          <option value="4. Competitor">4. Competitor</option>
+          <option value="5. Expert">5. Expert</option>
         </select>
         <label>Gender</label> <br />
         <select name="gender" id="gender">

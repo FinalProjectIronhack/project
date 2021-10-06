@@ -26,6 +26,7 @@ function Profile(props) {
           <h2> {profile.name}</h2>
           <h3>{profile.bio}</h3>
           <h3>My Sports: {profile.sports}</h3>
+          <h3>Level: {profile.level}</h3>
           <h3>Zip-Code: {profile.zip}</h3>
           <h3>Gender: {profile.gender}</h3>
         </ul>

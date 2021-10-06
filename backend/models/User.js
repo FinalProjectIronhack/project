@@ -9,7 +9,16 @@ const userSchema = new Schema(
       type: String,
       enum: ["Tennis", "Soccer", "Cricket", "Frisbee Golf", "Golf"],
     },
-    level: { type: Number, min: 1, max: 5 },
+    level: {
+      type: String,
+      enum: [
+        "1. Beginner",
+        "2. Advanced Beginner",
+        "3. Intermediate",
+        "4. Competitor",
+        "5. Expert",
+      ],
+    },
     gender: {
       type: String,
       enum: ["M", "F", "Other"],

@@ -44,10 +44,10 @@ const actions = {
   getProfile: async () => {
     return await axios.get(`${SERVER_URL}/my-profile`, createHeader());
   },
-  createUserDetails: async ({ bio, sports, gender, zip }) => {
+  createUserDetails: async ({ bio, sports, gender, zip, level }) => {
     return await axios.post(
       `${SERVER_URL}/my-profile`,
-      { bio, sports, gender, zip },
+      { bio, sports, gender, zip, level },
       createHeader()
     );
   },
