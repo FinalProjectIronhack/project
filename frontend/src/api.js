@@ -22,6 +22,14 @@ const actions = {
       // here we create our
     );
   },
+  newMessage: async ({ from, to, text }) => {
+    return await axios.post(
+      `${SERVER_URL}/send-email`,
+      { from, to, text },
+      createHeader()
+    );
+  },
+
   getQuestions: async () => {
     return await axios.get(`${SERVER_URL}/all-questions`, createHeader());
   },

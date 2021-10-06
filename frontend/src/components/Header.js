@@ -37,7 +37,7 @@ function Header(props) {
                   MyProfile
                 </Link>
                 <Link className="links" to="/profile">
-                  Messenges
+                  Messages
                 </Link>
               </>
             ) : null}
