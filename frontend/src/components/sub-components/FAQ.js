@@ -32,11 +32,11 @@ function Faq({ user }) {
 
   const handleAnswer = (id) => async (e) => {
     e.preventDefault();
+    alert("done");
     const answer = e.target.answer.value;
     const showQ = e.target.show.value === "true" ? true : false;
-    console.log(showQ, answer, id);
     let res = await actions.updateQuestion({ answer, showQ, id });
-    console.log(res.data);
+    window.location.reload(false);
   };
 
   const ShowQuestions = () => {
