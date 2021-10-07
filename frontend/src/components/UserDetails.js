@@ -32,18 +32,24 @@ function UserDetails(props) {
     <div>
       <form onSubmit={handleSubmit}>
         Bio
-        <input
+        <br />
+        <textarea
           onChange={(e) => setBio(e.target.value)}
           type="text"
           placeholder="enter bio"
-        ></input>
+          rows="4"
+          cols="50"
+        ></textarea>
         <br />
         <br />
         Zip
+        <br />
         <input
           onChange={(e) => setZip(e.target.value)}
           type="text"
-          placeholder="enter zipcode"
+          placeholder="Zipcode"
+          maxlength="5"
+          size="5"
         ></input>
         <label>Gender</label>
         <select
