@@ -160,6 +160,7 @@ router.post("/contacts", authorize, async (req, res) => {
 });
 
 router.post("/chat-open", authorize, async (req, res) => {
+  console.log(req.body, "chat open");
   let messages = await Message.find({ roomId: req.body.roomId });
   console.log(messages);
   res.json(messages);
