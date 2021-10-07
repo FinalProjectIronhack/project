@@ -145,7 +145,7 @@ var transporter = nodemailer.createTransport({
   },
 });
 
-router.post("/contacts", authorize, async (req, res) => {
+router.get("/contacts", authorize, async (req, res) => {
   let contacts = await Room.find().populate("userId");
   let myContacts = await contacts.filter((room) => {
     if (
@@ -155,6 +155,8 @@ router.post("/contacts", authorize, async (req, res) => {
       return room;
     }
   });
+
+  console.log(myContacts);
   res.json(myContacts);
 });
 

@@ -7,7 +7,7 @@ function MyMessages(props) {
   let [contacts, setContacts] = useState([]);
 
   useEffect(async () => {
-    let res = await actions.getMyContacts({ eMail: props?.user?.email });
+    let res = await actions.getMyContacts();
 
     console.log(res.data);
     setContacts(res.data);
@@ -17,6 +17,7 @@ function MyMessages(props) {
     return contacts.map((contact) => {
       return (
         <div>
+          <span>Chat room:</span>
           <Link to={`/room/${contact._id}`}>{contact._id}</Link>
         </div>
       );
@@ -26,12 +27,6 @@ function MyMessages(props) {
   return (
     <div>
       <ShowContacts />
-      {/* <Link
-        className="links"
-        to="https://playsports.netlify.app/room/"{contacts._id}
-      >
-        Home
-      </Link> */}
     </div>
   );
 }
