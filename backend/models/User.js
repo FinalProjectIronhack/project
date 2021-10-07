@@ -23,8 +23,7 @@ const userSchema = new Schema(
       type: String,
       enum: ["M", "F", "Other"],
     },
-    zip: { type: Number, min: 0, max: 99999 },
-
+    zip: String,
     name: String,
     email: String,
     imageUrl: String,
