@@ -147,9 +147,16 @@ var transporter = nodemailer.createTransport({
 
 router.post("/contacts", authorize, async (req, res) => {
   let contacts = await Room.find();
+  let myContacts = await contacts.filter((room) => {
+    if (
+      room.usersEmail[0] === req.body.eMail ||
+      room.usersEmail[1] === req.body.eMail
+    ) {
+      return room;
+    }
+  });
 
-  console.log(req.body.eMail);
-  res.json(contacts);
+  res.json(myContacts);
 });
 
 router.post("/chat-open", authorize, async (req, res) => {
