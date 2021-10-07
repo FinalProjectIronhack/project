@@ -57,6 +57,7 @@ nav {
   background-color: black;
   text-align: center;
 }
+
 footer {
   display: flex;
   justify-content: center;
@@ -89,19 +90,19 @@ footer {
 }
 .profilesContainer {
   display: flex;
+
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
 }
 form#search-form {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 30px;
   border: 2px solid grey;
   background-color: white;
-  height: 50px;
-  margin: 30px;
+  margin: 10rem;
 }
 
 .profilehr {
@@ -122,9 +123,11 @@ form#search-form {
   display: flex;
 }
 label {
+  display: flex;
   margin: 5px;
 }
 small {
+  display: flex;
   margin: 5px;
 }
 .player {

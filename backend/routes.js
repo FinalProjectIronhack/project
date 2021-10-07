@@ -138,4 +138,34 @@ function authorize(req, res, next) {
   }
 }
 
+var nodemailer = require("nodemailer");
+const { Router } = require("express");
+
+var transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "mikimikenazboi@gmail.com",
+    pass: "Andrew0414!",
+  },
+});
+
+router.post("/send-email", authorize, async (req, res) => {
+  var mailOptions = {
+    from: req.body.from,
+    to: req.body.to,
+    subject: "New Message from Play Sports",
+    text: req.body.text,
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
+});
+
+// mikimikenazboi@gmail.com
+
 module.exports = router;

@@ -44,6 +44,7 @@ function App() {
           path="/"
           render={(props) => <SportHome user={user} {...props} />}
         />
+
         <Route
           exact
           path="/all-players"
