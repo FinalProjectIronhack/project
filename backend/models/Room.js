@@ -1,0 +1,12 @@
+const { Schema, model } = require("mongoose");
+
+const roomSchema = new Schema(
+  {
+    usersId: [{ type: Schema.Types.ObjectId, ref: "User" }],
+    usersEmail: [String],
+  },
+
+  { timestamps: true }
+);
+
+module.exports = model("Room", roomSchema);
