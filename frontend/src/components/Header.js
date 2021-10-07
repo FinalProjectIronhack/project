@@ -1,6 +1,6 @@
 import { Link, Route, Switch } from "react-router-dom";
 import { useContext } from "react";
-import logo from "../Images/FinalProLogoBro.png";
+import logo from "../Images/tech-removebg.png";
 import TheContext from "../TheContext";
 import Auth from "./Auth";
 import Mainimg from "../Images/runreal.jpg";
