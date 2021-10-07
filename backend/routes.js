@@ -166,7 +166,8 @@ router.post("/open-chat", authorize, async (req, res) => {
     room = await Room.findOne({
       usersEmail: [req.body.from, req.body.to],
     });
-  } else {
+  }
+  if (!room) {
     room = await Room.create({ usersEmail: [req.body.to, req.body.from] });
   }
   res.json(room);
