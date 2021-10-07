@@ -5,6 +5,8 @@ const User = require("./models/User");
 const FAQ = require("./models/FreqQuestions");
 const Question = require("./models/Question");
 const jwt = require("jsonwebtoken");
+const Room = require("./models/Room");
+const Message = require("./models/Message");
 
 //http://localhost:5000/api/all-posts GET
 router.get("/all-posts", async (req, res) => {
@@ -130,6 +132,7 @@ function authorize(req, res, next) {
 
 var nodemailer = require("nodemailer");
 const { Router } = require("express");
+const { model } = require("mongoose");
 
 //playsports.netlify.app@gmail.com
 //PlaySports2021!
@@ -141,22 +144,44 @@ var transporter = nodemailer.createTransport({
     pass: "PlaySports2021!",
   },
 });
+router.get("/chat-open", authorize, async (req, res) => {
+  let room = await Room.find();
 
-router.post("/send-email", authorize, async (req, res) => {
-  var mailOptions = {
-    from: req.body.from,
-    to: req.body.to,
-    subject: "New Message from Play Sports",
-    text: req.body.text,
-  };
-
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Email sent: " + info.response);
-    }
+  console.log(req.data);
+});
+router.post("/open-chat", authorize, async (req, res) => {
+  let room = await Room.find({
+    usersEmail: [req.body.to, req.body.from],
   });
+
+  if (room.length === 0) {
+    room = await Room.create({ usersEmail: [req.body.to, req.body.from] });
+  }
+  res.json(room);
+});
+router.post("/send-email", authorize, async (req, res) => {
+  // let room = await Room.create({ usersEmail: [req.body.to, req.body.from] });
+
+  let message = await Message.create({
+    text: req.body.text,
+    userId: res.locals.user._id,
+    roomId: room._id,
+  });
+  console.log(room);
+  res.json(message);
+  // var mailOptions = {
+  //   from: req.body.from,
+  //   to: req.body.to,
+  //   subject: "New Message from Play Sports",
+  //   text: req.body.text,
+  // };
+  // transporter.sendMail(mailOptions, function (error, info) {
+  //   if (error) {
+  //     console.log(error);
+  //   } else {
+  //     console.log("Email sent: " + info.response);
+  //   }
+  // });
 });
 
 // mikimikenazboi@gmail.com

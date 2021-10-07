@@ -10,6 +10,7 @@ import HowItWorks from "./sub-components/HowItWorks";
 import Messenger from "./SportMessenger";
 import { Button } from "./button";
 import mock from "../Images/mock.PNG";
+import start from "../Images/starting-removebg-preview.png";
 
 function SportHome(props) {
   return (
@@ -29,6 +30,36 @@ function SportHome(props) {
           <Link to="/all-players">
             <Button buttonSize="button--large">Find Players</Button>
           </Link>
+        </div>
+      </div>
+      <div className="callToAction">
+        <div className="mediaLeft">
+          <img className="ctai" src={start} />
+        </div>
+        <div className="mediaRight">
+          <h1 className="ctah">Getting Started</h1>
+          <br></br>
+          <h3 className="ctab">
+            Sign up with your google account and connect with us on facebook!
+            cheer on your friends, discover new groups, join new teams, and take
+            your game to the next level! Its game time!
+          </h3>
+          <Button buttonSize="button--large">
+            Connect with us on facebook
+          </Button>
+        </div>
+      </div>
+      <div className="callToAction">
+        <div className="mediaRight">
+          <h1 className="ctah">Stay updates on whats new with the team. </h1>
+          <br></br>
+          <h3 className="ctab">
+            Here at play sports we are constantly trying to innovate new ways
+            for connecting you to your new community of players. Stay updated on
+            all of our latest tools and assets by subscribing to our news
+            letter!
+          </h3>
+          <Button buttonSize="button--large">Subscribe</Button>
         </div>
       </div>
       <div className="mockContainer">

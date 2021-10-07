@@ -1,4 +1,5 @@
 import axios from "axios";
+// import { create } from "../../backend/models/Post";
 
 let SERVER_URL =
   process.env.NODE_ENV === "development"
@@ -20,6 +21,20 @@ const actions = {
       { name, question },
       createHeader()
       // here we create our
+    );
+  },
+  newChatRoom: async ({ from, to }) => {
+    return await axios.post(
+      `${SERVER_URL}/open-chat`,
+      { from, to },
+      createHeader()
+    );
+  },
+  getRoom: async ({ roomId }) => {
+    return await axios.get(
+      `${SERVER_URL}/chat-open`,
+      { roomId },
+      createHeader()
     );
   },
   newMessage: async ({ from, to, text }) => {

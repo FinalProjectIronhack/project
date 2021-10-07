@@ -5,7 +5,7 @@ import actions from "../../api";
 import UserDetails from "../UserDetails";
 import { Button } from "../button";
 import "../../App.css";
-function FindPlayer() {
+function FindPlayer(props) {
   const [players, setPlayers] = useState([]);
 
   useEffect(async () => {
@@ -39,7 +39,7 @@ function FindPlayer() {
   };
   const ShowProfile = () => {
     return players.map((player) => {
-      return <Player player={player} />;
+      return <Player player={player} history={props.history} />;
     });
   };
 
