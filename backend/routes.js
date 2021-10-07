@@ -168,7 +168,7 @@ router.post("/send-message", authorize, async (req, res) => {
     roomId: req.body.roomId,
   });
 
-  let room = await Room.findById(roomId);
+  let room = await Room.findById(req.body.roomId);
 
   let toEmail = room.usersEmail.filter(
     (email) => email !== res.locals.user.email
