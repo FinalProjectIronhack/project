@@ -31,16 +31,16 @@ const actions = {
     );
   },
   getRoom: async ({ roomId }) => {
-    return await axios.get(
+    return await axios.post(
       `${SERVER_URL}/chat-open`,
       { roomId },
       createHeader()
     );
   },
-  newMessage: async ({ from, to, text }) => {
+  newMessage: async ({ text, roomId }) => {
     return await axios.post(
-      `${SERVER_URL}/send-email`,
-      { from, to, text },
+      `${SERVER_URL}/send-message`,
+      { text, roomId },
       createHeader()
     );
   },

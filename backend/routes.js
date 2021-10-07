@@ -144,44 +144,51 @@ var transporter = nodemailer.createTransport({
     pass: "PlaySports2021!",
   },
 });
-router.get("/chat-open", authorize, async (req, res) => {
-  let room = await Room.find();
-
-  console.log(req.data);
+router.post("/chat-open", authorize, async (req, res) => {
+  let messages = await Message.find({ roomId: req.body.roomId });
+  console.log(messages);
+  res.json(messages);
 });
 router.post("/open-chat", authorize, async (req, res) => {
-  let room = await Room.find({
+  let room = await Room.findOne({
     usersEmail: [req.body.to, req.body.from],
   });
 
-  if (room.length === 0) {
+  if (!room) {
     room = await Room.create({ usersEmail: [req.body.to, req.body.from] });
   }
   res.json(room);
 });
-router.post("/send-email", authorize, async (req, res) => {
+router.post("/send-message", authorize, async (req, res) => {
   // let room = await Room.create({ usersEmail: [req.body.to, req.body.from] });
 
   let message = await Message.create({
     text: req.body.text,
     userId: res.locals.user._id,
-    roomId: room._id,
+    roomId: req.body.roomId,
   });
-  console.log(room);
+
+  let room = await Room.findById(roomId);
+
+  let toEmail = room.usersEmail.filter(
+    (email) => email !== res.locals.user.email
+  );
+
+  console.log(toEmail);
+
+  var mailOptions = {
+    to: toEmail,
+    subject: "New Message from Play Sports",
+    html: `<h2>${req.body.text}</h2><a href='https://playsports.netlify.app/room/${roomId}'>Respond</a>`,
+  };
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
   res.json(message);
-  // var mailOptions = {
-  //   from: req.body.from,
-  //   to: req.body.to,
-  //   subject: "New Message from Play Sports",
-  //   text: req.body.text,
-  // };
-  // transporter.sendMail(mailOptions, function (error, info) {
-  //   if (error) {
-  //     console.log(error);
-  //   } else {
-  //     console.log("Email sent: " + info.response);
-  //   }
-  // });
 });
 
 // mikimikenazboi@gmail.com

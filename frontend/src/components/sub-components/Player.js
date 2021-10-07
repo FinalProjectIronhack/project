@@ -6,24 +6,14 @@ import actions from "../../api";
 function Player({ player, history }) {
   let { user } = useContext(TheContext);
   let [open, setOpen] = useState(false);
-  let [post, setPost] = useState("");
 
-  let handleSubmit = async (e) => {
-    e.preventDefault();
-    let res = await actions.newMessage({
-      from: user.email,
-      to: player.email,
-      text: post,
-    });
-    console.log(res);
-  };
   const createRoom = async () => {
     let res = await actions.newChatRoom({
       from: user.email,
       to: player.email,
     });
     console.log(res.data);
-    history.push(`/room/${res.data[0]._id}`);
+    history.push(`/room/${res.data?._id}`);
   };
   return (
     <div className="player fpc" key={player._id}>
@@ -48,14 +38,6 @@ function Player({ player, history }) {
         </div>
         <Button onClick={createRoom}>Open Chat</Button>
       </div>
-
-      <section></section>
-      {open ? (
-        <form onSubmit={handleSubmit}>
-          <input onChange={(e) => setPost(e.target.value)}></input>
-          <button>send</button>
-        </form>
-      ) : null}
     </div>
   );
 }
