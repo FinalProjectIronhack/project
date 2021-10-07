@@ -1,4 +1,5 @@
 import axios from "axios";
+// import { create } from "../../backend/models/Post";
 
 let SERVER_URL =
   process.env.NODE_ENV === "development"
@@ -22,10 +23,24 @@ const actions = {
       // here we create our
     );
   },
-  newMessage: async ({ from, to, text }) => {
+  newChatRoom: async ({ from, to }) => {
     return await axios.post(
-      `${SERVER_URL}/send-email`,
-      { from, to, text },
+      `${SERVER_URL}/open-chat`,
+      { from, to },
+      createHeader()
+    );
+  },
+  getRoom: async ({ roomId }) => {
+    return await axios.post(
+      `${SERVER_URL}/chat-open`,
+      { roomId },
+      createHeader()
+    );
+  },
+  newMessage: async ({ text, roomId }) => {
+    return await axios.post(
+      `${SERVER_URL}/send-message`,
+      { text, roomId },
       createHeader()
     );
   },
@@ -62,10 +77,10 @@ const actions = {
   getProfile: async () => {
     return await axios.get(`${SERVER_URL}/my-profile`, createHeader());
   },
-  createUserDetails: async ({ bio, sports, gender, zip }) => {
+  createUserDetails: async ({ bio, sports, gender, zip, level }) => {
     return await axios.post(
       `${SERVER_URL}/my-profile`,
-      { bio, sports, gender, zip },
+      { bio, sports, gender, zip, level },
       createHeader()
     );
   },
