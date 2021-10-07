@@ -163,7 +163,7 @@ router.post("/open-chat", authorize, async (req, res) => {
   });
 
   if (!room) {
-    room = await await Room.findOne({
+    room = await Room.findOne({
       usersEmail: [req.body.from, req.body.to],
     });
   } else {
