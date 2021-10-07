@@ -37,6 +37,15 @@ const actions = {
       createHeader()
     );
   },
+
+  getMyContacts: async ({ eMail }) => {
+    return await axios.post(
+      `${SERVER_URL}/contacts`,
+      { eMail },
+      createHeader()
+    );
+  },
+
   newMessage: async ({ text, roomId }) => {
     return await axios.post(
       `${SERVER_URL}/send-message`,

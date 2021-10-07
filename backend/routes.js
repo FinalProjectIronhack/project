@@ -144,6 +144,14 @@ var transporter = nodemailer.createTransport({
     pass: "PlaySports2021!",
   },
 });
+
+router.post("/contacts", authorize, async (req, res) => {
+  let contacts = await Room.find();
+
+  console.log(req.body.eMail);
+  res.json(contacts);
+});
+
 router.post("/chat-open", authorize, async (req, res) => {
   let messages = await Message.find({ roomId: req.body.roomId });
   console.log(messages);
@@ -155,6 +163,10 @@ router.post("/open-chat", authorize, async (req, res) => {
   });
 
   if (!room) {
+    room = await await Room.findOne({
+      usersEmail: [req.body.from, req.body.to],
+    });
+  } else {
     room = await Room.create({ usersEmail: [req.body.to, req.body.from] });
   }
   res.json(room);
