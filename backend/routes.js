@@ -169,6 +169,7 @@ router.post("/send-message", authorize, async (req, res) => {
   });
 
   let room = await Room.findById(req.body.roomId);
+  console.log(req.body);
 
   let toEmail = room.usersEmail.filter(
     (email) => email !== res.locals.user.email
@@ -179,7 +180,7 @@ router.post("/send-message", authorize, async (req, res) => {
   var mailOptions = {
     to: toEmail,
     subject: "New Message from Play Sports",
-    html: `<h2>${req.body.text}</h2><a href='https://playsports.netlify.app/room/${roomId}'>Respond</a>`,
+    html: `<h2>${req.body.text}</h2><a href='https://playsports.netlify.app/room/${req.body.roomId}'>Respond</a>`,
   };
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {

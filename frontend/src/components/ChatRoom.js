@@ -11,7 +11,7 @@ function ChatRoom(props) {
     e.preventDefault();
     let res = await actions.newMessage({
       text: post,
-      roomID: props.match.params.roomId,
+      roomId: props.match.params.roomId,
     });
     setMessages([...messages, ...[res.data]]);
     console.log(res);
