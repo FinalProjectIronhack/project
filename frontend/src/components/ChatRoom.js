@@ -37,7 +37,7 @@ function ChatRoom(props) {
       <ShowMessages />
       <form onSubmit={handleSubmit}>
         <input value={post} onChange={(e) => setPost(e.target.value)}></input>
-        <button>send</button>
+        <button>Send!</button>
       </form>
     </div>
   );
