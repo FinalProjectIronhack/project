@@ -53,7 +53,8 @@ nav {
   align-items: center;
   margin-top: 50px;
   height: 10vh;
-
+  margin-left: 1rem;
+  font-size: larger;
   background-color: black;
   text-align: center;
 }
@@ -99,9 +100,64 @@ footer {
   height: 600px !important;
 }
 .profilePage {
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
+
+.font-style {
+  font-family: "Roboto", sans-serif;
+}
+
+.editProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bio-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bio-edit > textarea {
+  width: 90%;
+  border-radius: 5px;
+}
+
+.zip-gender {
+  display: flex;
+  justify-content: space-around;
+}
+
+.my-sports {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.level {
+  text-align: center;
+}
+
+.my-sp {
+  text-align: center;
+}
+
+.my-prof-btn {
+  text-align: center;
+}
+
+.my-messages {
+  text-align: center;
+  margin: 5rem;
+}
+
+.my-message-div {
+  border: 1px solid #fc5200;
+}
+
 form#search-form {
   display: flex;
   justify-content: space-between;
@@ -109,6 +165,7 @@ form#search-form {
   margin-top: 30px;
   border: 2px solid rgb(143 142 142);
   background-color: white;
+  margin-bottom: 5rem;
   margin: 10rem;
 }
 
@@ -120,6 +177,7 @@ form#search-form {
   margin: 10px;
   margin-left: 240px;
   margin-right: 240px;
+  margin-bottom: 3rem;
   background-color: white;
 }
 .profilehr {
@@ -378,12 +436,15 @@ footer > img {
   justify-content: center;
   margin-left: 240px;
   margin-right: 240px;
-  margin-bottom: 5px;
+  margin-bottom: 3rem;
+
+  background-color: rgb(242, 241, 241);
 }
+
 .img22 {
   object-fit: cover;
   height: 50vh;
-  width: 50vw;
+  width: 45vw;
   border: 2px solid rgb(89, 87, 87);
   border-radius: 5px;
   margin: 5px;
@@ -411,4 +472,33 @@ footer > img {
   border: 2px solid rgb(89, 87, 87);
   border-radius: 5px;
   margin: 5px;
+}
+.ctai {
+  width: 10vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+.ctai2 {
+  width: 10vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+.hhr {
+  border: 0.5px solid #fc5200;
+  color: #fc5200;
+  width: 99%;
+}
+.logoo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin-left: 14vw;
+  margin-right: 14vw;
+  height: 15vh;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+.Nike-logo {
+  height: 15vh;
 }

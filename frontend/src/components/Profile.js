@@ -46,24 +46,16 @@ function Profile(props) {
           <h4>Gender: {profile.gender}</h4>
         </div>
       </div>
-      // <div className="card" key={profile._id}>
-      //   <ul className="profile-card">
-      //
-      //
-      //
-      //
-      //
-      //
-      //
-      //   </ul>
-      // </div>
     );
   };
 
   return (
     <div className="profilePage">
-      <ShowProfile /> <Button onClick={edit}> Edit Profile Card </Button>
-      {showForm ? <UserDetails /> : <></>}
+      <ShowProfile />
+      <div className="editProfile">
+        <Button onClick={edit}> Edit Profile Card </Button>
+        {showForm ? <UserDetails /> : <></>}
+      </div>
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import React from "react";
 import map from "../../Images/monochromaticcolors.webp";
-import mission from "../../Images/mission icon.png";
-import steps from "../../Images/steps icon.png";
+import mission from "../../Images/mission_icon-removebg-preview (1).png";
+import steps from "../../Images/steps_icon-removebg-preview.png";
 import "./HowItWorks.css";
-import select from "../../Images/select.png";
-import running from "../../Images/running icon.png";
+import select from "../../Images/select-removebg-preview.png";
+import running from "../../Images/running_icon-removebg-preview.png";
 import { Button } from "../button.jsx";
+import { Switch, Link, Route } from "react-router-dom";
 
 function HowItWorks() {
   const ColoredLine = ({ color }) => (
@@ -55,9 +56,11 @@ function HowItWorks() {
             display the closest events, games, and players that match your
             parameters filtered by sport, game, and zip-code.
           </p>
-          <Button buttonSize="button--large" className="hiwb">
-            Find Player
-          </Button>
+          <Link to="/all-players">
+            <Button buttonSize="button--large" className="hiwb">
+              Find Player
+            </Button>
+          </Link>
         </div>
         <hr className="hiwhr"></hr>
         <div className="containerHIW">
@@ -72,9 +75,11 @@ function HowItWorks() {
             meet up if its not already specified. REMEMBER! Be safe, meet in
             public spaces, and never share personal information!{" "}
           </p>
-          <Button buttonSize="button--large" className="hiwb">
-            Messages
-          </Button>
+          <Link className="links" to="/my-messages">
+            <Button buttonSize="button--large" className="hiwb">
+              Messages
+            </Button>
+          </Link>
         </div>
         <hr className="hiwhr"></hr>
         <div className="containerHIW">

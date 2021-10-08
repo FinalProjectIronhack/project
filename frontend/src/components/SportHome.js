@@ -1,5 +1,6 @@
 import React from "react";
 
+import teams from "../Images/team_icon-removebg-preview.png";
 import "../App.css";
 import { Switch, Link, Route } from "react-router-dom";
 import Login from "./sub-components/Login";
@@ -9,12 +10,17 @@ import SignUp from "./sub-components/SignUp";
 import HowItWorks from "./sub-components/HowItWorks";
 import Messenger from "./Messenger";
 import { Button } from "./button";
-import mock from "../Images/mock.PNG";
+import nike from "../Images/equality_logo-03_6__original.jpg";
 import start from "../Images/starting-removebg-preview.png";
 import CarouselD from "./Carousel";
+import swal from "sweetalert";
 function SportHome(props) {
   const bannerError = (e) => {
     alert(e);
+  };
+
+  const suscripted = () => {
+    swal("Thanks for subscribing!", "It's time to play!", "success");
   };
 
   return (
@@ -22,53 +28,67 @@ function SportHome(props) {
       <div className="buttonContainer">
         <div className="btndiv">
           <Link to="/how-does-it-work">
-            <Button buttonSize="button--large">How Does It Work</Button>
+            <Button className="homeButton" buttonSize="button--large">
+              How Does It Work
+            </Button>
           </Link>
         </div>
         <div className="btndiv">
           <Link to="/FAQ">
-            <Button buttonSize="button--large">FAQ</Button>
+            <Button className="homeButton" buttonSize="button--large">
+              FAQ
+            </Button>
           </Link>
         </div>
         <div className="btndiv">
           <Link to="/all-players">
-            <Button buttonSize="button--large">Find Players</Button>
+            <Button className="homeButton" buttonSize="button--large">
+              Find Players
+            </Button>
           </Link>
         </div>
       </div>
-
+      <div className="logoo">
+        <img className="Nike-logo" src={nike} />
+      </div>
+      <h1 className="car-header"> Connect. Message. Meet. Play. </h1>
       <div className="callToAction">
         <div className="mediaLeft">
           <img className="ctai" src={start} />
         </div>
         <div className="mediaRight">
           <h1 className="ctah">Getting Started</h1>
-          <br></br>
+          <hr className="hhr"></hr>
           <h3 className="ctab">
             Sign up with your google account and connect with us on facebook!
             cheer on your friends, discover new groups, join new teams, and take
             your game to the next level! Its game time!
           </h3>
-          <Button buttonSize="button--large">
-            Connect with us on facebook
-          </Button>
+          <a href="https://www.facebook.com/" target="_blank">
+            <Button buttonSize="button--large">
+              Connect with us on facebook
+            </Button>
+          </a>
         </div>
       </div>
       <div className="callToAction">
         <div className="mediaRight">
-          <h1 className="ctah">Stay updates on whats new with the team. </h1>
-          <br></br>
+          <img className="ctai2" src={teams} />
+        </div>
+        <div className="mediaRight">
+          <h1 className="ctah">Stay updated on whats new with the team. </h1>
+          <hr className="hhr"></hr>
           <h3 className="ctab">
             Here at play sports we are constantly trying to innovate new ways
             for connecting you to your new community of players. Stay updated on
             all of our latest tools and assets by subscribing to our news
             letter!
           </h3>
-          <Button buttonSize="button--large">Subscribe</Button>
+          <Button onClick={suscripted} buttonSize="button--large">
+            Subscribe
+          </Button>
         </div>
       </div>
-
-      <h1 className="car-header"> Connect. Message. Meet. Play. </h1>
 
       <div className="mockContainer">
         {/* <img className="iphoneMock" src={mock} alt="mockUp" /> * */}
