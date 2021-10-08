@@ -33,12 +33,14 @@ function ChatRoom(props) {
 
   return (
     <div>
-      Chat Room {props.match.params.roomId}
-      <ShowMessages />
-      <form onSubmit={handleSubmit}>
-        <input value={post} onChange={(e) => setPost(e.target.value)}></input>
-        <button>Send!</button>
-      </form>
+      <div className="chatRoom">
+        Chat Room {props.match.params.roomId}
+        <ShowMessages />
+        <form onSubmit={handleSubmit}>
+          <input value={post} onChange={(e) => setPost(e.target.value)}></input>
+          <button>Send!</button>
+        </form>
+      </div>
     </div>
   );
 }

@@ -11,10 +11,14 @@ import Messenger from "./SportMessenger";
 import { Button } from "./button";
 import mock from "../Images/mock.PNG";
 import start from "../Images/starting-removebg-preview.png";
-
+import CarouselD from "./Carousel";
 function SportHome(props) {
+  const bannerError = (e) => {
+    alert(e);
+  };
+
   return (
-    <div>
+    <div className="homeContainer">
       <div className="buttonContainer">
         <div className="btndiv">
           <Link to="/how-does-it-work">
@@ -32,6 +36,7 @@ function SportHome(props) {
           </Link>
         </div>
       </div>
+
       <div className="callToAction">
         <div className="mediaLeft">
           <img className="ctai" src={start} />
@@ -62,9 +67,14 @@ function SportHome(props) {
           <Button buttonSize="button--large">Subscribe</Button>
         </div>
       </div>
+
+      <h1 className="car-header"> Connect. Message. Meet. Play. </h1>
+
       <div className="mockContainer">
-        <img className="iphoneMock" src={mock} alt="mockUp" />
+        {/* <img className="iphoneMock" src={mock} alt="mockUp" /> * */}
+        <CarouselD> </CarouselD>
       </div>
+      <div></div>
     </div>
   );
 }
