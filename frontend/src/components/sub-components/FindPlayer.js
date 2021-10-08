@@ -46,13 +46,8 @@ function FindPlayer(props) {
     <div>
       <form id="search-form" onSubmit={searchPlayers}>
         <label>ZIP</label>
-        <input type="number" id="city_zip" placeholder="Enter your Zip code" />
-        {/* <small>This field is required and cannot be empty</small> */}
+        <input type="text" id="city_zip" placeholder="Enter your Zip code" />
         <br />
-        {/* <label>Age</label>
-        <input type="number" id="agemin" placeholder="Enter age from" />
-        <input type="number" id="agemax" placeholder="Enter age to" />
-        <br /> */}
         <label>Level</label> <br />
         <select name="skill_level" id="skill_level">
           <option value="" defaultValue="">
