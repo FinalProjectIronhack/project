@@ -1,4 +1,5 @@
 import React from "react";
+
 import teams from "../Images/team_icon-removebg-preview.png";
 import "../App.css";
 import { Switch, Link, Route } from "react-router-dom";
@@ -9,7 +10,7 @@ import SignUp from "./sub-components/SignUp";
 import HowItWorks from "./sub-components/HowItWorks";
 import Messenger from "./Messenger";
 import { Button } from "./button";
-import mock from "../Images/mock.PNG";
+import nike from "../Images/equality_logo-03_6__original.jpg";
 import start from "../Images/starting-removebg-preview.png";
 import CarouselD from "./Carousel";
 import swal from "sweetalert";
@@ -27,21 +28,30 @@ function SportHome(props) {
       <div className="buttonContainer">
         <div className="btndiv">
           <Link to="/how-does-it-work">
-            <Button buttonSize="button--large">How Does It Work</Button>
+            <Button className="homeButton" buttonSize="button--large">
+              How Does It Work
+            </Button>
           </Link>
         </div>
         <div className="btndiv">
           <Link to="/FAQ">
-            <Button buttonSize="button--large">FAQ</Button>
+            <Button className="homeButton" buttonSize="button--large">
+              FAQ
+            </Button>
           </Link>
         </div>
         <div className="btndiv">
           <Link to="/all-players">
-            <Button buttonSize="button--large">Find Players</Button>
+            <Button className="homeButton" buttonSize="button--large">
+              Find Players
+            </Button>
           </Link>
         </div>
       </div>
-
+      <div className="logoo">
+        <img className="Nike-logo" src={nike} />
+      </div>
+      <h1 className="car-header"> Connect. Message. Meet. Play. </h1>
       <div className="callToAction">
         <div className="mediaLeft">
           <img className="ctai" src={start} />
@@ -79,8 +89,6 @@ function SportHome(props) {
           </Button>
         </div>
       </div>
-
-      <h1 className="car-header"> Connect. Message. Meet. Play. </h1>
 
       <div className="mockContainer">
         {/* <img className="iphoneMock" src={mock} alt="mockUp" /> * */}
