@@ -111,6 +111,7 @@ form#search-form {
   background-color: white;
   margin: 10rem;
 }
+
 .callToAction {
   display: flex;
   border: 1px solid slategrey;
@@ -343,4 +344,71 @@ footer > img {
   justify-content: center;
   align-items: center;
   object-fit: cover;
+  height: 500px;
+}
+
+.car {
+  font-family: sans-serif;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 70vw;
+}
+.car-container {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img11 {
+  object-fit: contain;
+  height: 50vh;
+  width: 50vw;
+  border: 2px solid rgb(89, 87, 87);
+  border-radius: 5px;
+  margin: 5px;
+  top: 0px;
+}
+.car-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 240px;
+  margin-right: 240px;
+  margin-bottom: 5px;
+}
+.img22 {
+  object-fit: cover;
+  height: 50vh;
+  width: 50vw;
+  border: 2px solid rgb(89, 87, 87);
+  border-radius: 5px;
+  margin: 5px;
+}
+.img33 {
+  object-fit: cover;
+  height: 50vh;
+  width: 50vw;
+  border: 2px solid rgb(89, 87, 87);
+  border-radius: 5px;
+  margin: 5px;
+}
+.img44 {
+  object-fit: cover;
+  height: 50vh;
+  width: 50vw;
+  border: 2px solid rgb(89, 87, 87);
+  border-radius: 5px;
+  margin: 5px;
+}
+.img {
+  object-fit: cover;
+  height: 50vh;
+  width: 50vw;
+  border: 2px solid rgb(89, 87, 87);
+  border-radius: 5px;
+  margin: 5px;
 }

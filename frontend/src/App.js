@@ -18,6 +18,7 @@ import Profile from "./components/Profile";
 import Footer from "./components/sub-components/Footer";
 import FindPlayer from "./components/sub-components/FindPlayer";
 import ChatRoom from "./components/ChatRoom";
+
 function App() {
   const [user, setUser] = useState({});
 
