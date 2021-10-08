@@ -13,10 +13,14 @@ import { Button } from "./button";
 import nike from "../Images/equality_logo-03_6__original.jpg";
 import start from "../Images/starting-removebg-preview.png";
 import CarouselD from "./Carousel";
-
+import swal from "sweetalert";
 function SportHome(props) {
   const bannerError = (e) => {
     alert(e);
+  };
+
+  const suscripted = () => {
+    swal("Thanks for subscribing!", "It's time to play!", "success");
   };
 
   return (
@@ -60,9 +64,11 @@ function SportHome(props) {
             cheer on your friends, discover new groups, join new teams, and take
             your game to the next level! Its game time!
           </h3>
-          <Button buttonSize="button--large">
-            Connect with us on facebook
-          </Button>
+          <a href="https://www.facebook.com/" target="_blank">
+            <Button buttonSize="button--large">
+              Connect with us on facebook
+            </Button>
+          </a>
         </div>
       </div>
       <div className="callToAction">
@@ -78,7 +84,9 @@ function SportHome(props) {
             all of our latest tools and assets by subscribing to our news
             letter!
           </h3>
-          <Button buttonSize="button--large">Subscribe</Button>
+          <Button onClick={suscripted} buttonSize="button--large">
+            Subscribe
+          </Button>
         </div>
       </div>
 
