@@ -379,7 +379,9 @@ footer > img {
   margin-left: 240px;
   margin-right: 240px;
   margin-bottom: 5px;
+  background-color: rgb(242, 241, 241);
 }
+
 .img22 {
   object-fit: cover;
   height: 50vh;
@@ -426,4 +428,16 @@ footer > img {
   border: 0.5px solid rgb(143, 142, 142);
   color: rgb(143, 142, 142);
   width: 99%;
+}
+.logoo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin-left: 14vw;
+  margin-right: 14vw;
+  height: 15vh;
+}
+.Nike-logo {
+  height: 15vh;
 }
