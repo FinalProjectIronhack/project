@@ -69,6 +69,16 @@ const actions = {
       //when we call getPlayers in a function, we are posting player(however it is defined or set) to all-players/ players is a single argument
     );
   },
+
+  getMessages: async (clickedOn) => {
+    return await axios.get(
+      `${SERVER_URL}/Messenger`,
+      clickedOn,
+      createHeader()
+    );
+
+  },
+
   getProfile: async () => {
     return await axios.get(`${SERVER_URL}/my-profile`, createHeader());
   },

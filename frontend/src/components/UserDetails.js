@@ -79,6 +79,21 @@ function UserDetails(props) {
               )
             }
             type="checkbox"
+            id="sport6"
+            name="sport6"
+            value="Running"
+          ></input>
+          <span>Running</span>
+          <br />
+          <input
+            onChange={(e) =>
+              setSports(
+                sports.includes(e.target.value)
+                  ? sports
+                  : [...sports, e.target.value]
+              )
+            }
+            type="checkbox"
             id="sport1"
             name="sport1"
             value="Tennis"
