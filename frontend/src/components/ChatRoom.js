@@ -42,6 +42,7 @@ function ChatRoom(props) {
 
           <ShowMessages />
           <li className="mine"></li>
+          {/* <div> */}
           <form onSubmit={handleSubmit}>
             <input value={post} onChange={(e) => setPost(e.target.value)}></input>
             <button>Send!</button>
