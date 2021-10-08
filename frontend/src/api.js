@@ -38,12 +38,8 @@ const actions = {
     );
   },
 
-  getMyContacts: async ({ eMail }) => {
-    return await axios.post(
-      `${SERVER_URL}/contacts`,
-      { eMail },
-      createHeader()
-    );
+  getMyContacts: async () => {
+    return await axios.get(`${SERVER_URL}/contacts`, createHeader());
   },
 
   newMessage: async ({ text, roomId }) => {
