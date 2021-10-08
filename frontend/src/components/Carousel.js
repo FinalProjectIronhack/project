@@ -8,16 +8,7 @@ import img3 from "../Images/adidas.jpg";
 
 import "../App.css";
 
-<<<<<<< HEAD
-const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  // { width: 550, itemsToShow: 2 },
-  // { width: 768, itemsToShow: 3 },
-  // { width: 1200, itemsToShow: 4 },
-];
-=======
 const breakPoints = [{ width: 1, itemsToShow: 1 }];
->>>>>>> 0657e1eb37c7e1595491218877e2efd81e281b42
 
 function CarouselD() {
   return (
