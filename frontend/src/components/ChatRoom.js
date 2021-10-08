@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import actions from "../api";
+import "./chatRoom.css"
 
 function ChatRoom(props) {
   let [messages, setMessages] = useState([]);
@@ -33,12 +34,24 @@ function ChatRoom(props) {
 
   return (
     <div>
-      Chat Room {props.match.params.roomId}
-      <ShowMessages />
-      <form onSubmit={handleSubmit}>
-        <input value={post} onChange={(e) => setPost(e.target.value)}></input>
-        <button>Send!</button>
-      </form>
+      <div className="chatRoom" >
+
+        <h1>Play Sports Chat Room</h1>
+        <ol className="messages">
+          {/* Chat Room {props.match.params.roomId} */}
+
+          <ShowMessages />
+          <li className="mine"></li>
+          <form onSubmit={handleSubmit}>
+            <input value={post} onChange={(e) => setPost(e.target.value)}></input>
+            <button>Send!</button>
+          </form>
+        </ol>
+
+
+
+
+      </div>
     </div>
   );
 }
