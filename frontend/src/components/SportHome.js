@@ -1,5 +1,5 @@
 import React from "react";
-
+import teams from "../Images/team_icon-removebg-preview.png";
 import "../App.css";
 import { Switch, Link, Route } from "react-router-dom";
 import Login from "./sub-components/Login";
@@ -48,7 +48,7 @@ function SportHome(props) {
         </div>
         <div className="mediaRight">
           <h1 className="ctah">Getting Started</h1>
-          <br></br>
+          <hr className="hhr"></hr>
           <h3 className="ctab">
             Sign up with your google account and connect with us on facebook!
             cheer on your friends, discover new groups, join new teams, and take
@@ -63,8 +63,11 @@ function SportHome(props) {
       </div>
       <div className="callToAction">
         <div className="mediaRight">
-          <h1 className="ctah">Stay updates on whats new with the team. </h1>
-          <br></br>
+          <img className="ctai2" src={teams} />
+        </div>
+        <div className="mediaRight">
+          <h1 className="ctah">Stay updated on whats new with the team. </h1>
+          <hr className="hhr"></hr>
           <h3 className="ctab">
             Here at play sports we are constantly trying to innovate new ways
             for connecting you to your new community of players. Stay updated on

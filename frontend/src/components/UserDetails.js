@@ -32,133 +32,143 @@ function UserDetails(props) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        Bio
+      <form className="font-style" onSubmit={handleSubmit}>
+        <div className="bio-edit">
+          <span>Bio</span>
+          <br />
+          <textarea
+            onChange={(e) => setBio(e.target.value)}
+            type="text"
+            placeholder="enter bio"
+            rows="4"
+            cols="50"
+          ></textarea>
+        </div>
         <br />
-        <textarea
-          onChange={(e) => setBio(e.target.value)}
-          type="text"
-          placeholder="enter bio"
-          rows="4"
-          cols="50"
-        ></textarea>
-        <br />
-        <br />
-        Zip
-        <br />
-        <input
-          onChange={(e) => setZip(e.target.value)}
-          type="text"
-          placeholder="Zipcode"
-          maxlength="5"
-          size="5"
-        ></input>
-        <label>Gender</label>
-        <select
-          name="gender"
-          id="gender"
-          onChange={(e) => setGender(e.target.value)}
-        >
-          <option value="" selected="">
-            Any
-          </option>
-          <option value="M">Male</option>
-          <option value="F">Female</option>
-          <option value="Other">Other</option>
-        </select>
+        <div className="zip-gender">
+          <div>
+            <span>Zip</span>{" "}
+            <input
+              onChange={(e) => setZip(e.target.value)}
+              type="text"
+              placeholder="Zipcode"
+              maxlength="5"
+              size="5"
+            ></input>
+          </div>
+          <div>
+            <span>Gender</span>
+            <select
+              name="gender"
+              id="gender"
+              onChange={(e) => setGender(e.target.value)}
+            >
+              <option value="" selected="">
+                Any
+              </option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
         <br />
         <div>
           My Sports
           <br />
-          <input
-            onChange={(e) =>
-              setSports(
-                sports.includes(e.target.value)
-                  ? sports
-                  : [...sports, e.target.value]
-              )
-            }
-            type="checkbox"
-            id="sport6"
-            name="sport6"
-            value="Running"
-          ></input>
-          <span>Running</span>
+          <div>
+            <input
+              onChange={(e) =>
+                setSports(
+                  sports.includes(e.target.value)
+                    ? sports
+                    : [...sports, e.target.value]
+                )
+              }
+              type="checkbox"
+              id="sport6"
+              name="sport6"
+              value="Running"
+            ></input>
+            <span>Running</span>
+            <br />
+            <input
+              onChange={(e) =>
+                setSports(
+                  sports.includes(e.target.value)
+                    ? sports
+                    : [...sports, e.target.value]
+                )
+              }
+              type="checkbox"
+              id="sport1"
+              name="sport1"
+              value="Tennis"
+            ></input>
+            <span>Tennis</span>
+            <br />
+            <input
+              onChange={(e) =>
+                setSports(
+                  sports.includes(e.target.value)
+                    ? sports
+                    : [...sports, e.target.value]
+                )
+              }
+              type="checkbox"
+              id="sport2"
+              name="sport2"
+              value="Soccer"
+            ></input>
+            <span>Soccer</span>
+          </div>
           <br />
-          <input
-            onChange={(e) =>
-              setSports(
-                sports.includes(e.target.value)
-                  ? sports
-                  : [...sports, e.target.value]
-              )
-            }
-            type="checkbox"
-            id="sport1"
-            name="sport1"
-            value="Tennis"
-          ></input>
-          <span>Tennis</span>
-          <br />
-          <input
-            onChange={(e) =>
-              setSports(
-                sports.includes(e.target.value)
-                  ? sports
-                  : [...sports, e.target.value]
-              )
-            }
-            type="checkbox"
-            id="sport2"
-            name="sport2"
-            value="Soccer"
-          ></input>
-          <span>Soccer</span>
-          <br />
-          <input
-            onChange={(e) =>
-              setSports(
-                sports.includes(e.target.value)
-                  ? sports
-                  : [...sports, e.target.value]
-              )
-            }
-            type="checkbox"
-            id="sport3"
-            name="sport3"
-            value="Cricket"
-          ></input>
-          <span>Cricket</span>
-          <br />
-          <input
-            onChange={(e) =>
-              setSports(
-                sports.includes(e.target.value)
-                  ? sports
-                  : [...sports, e.target.value]
-              )
-            }
-            type="checkbox"
-            id="sport4"
-            name="sport4"
-            value="Frisbee Golf"
-          ></input>
-          <span>Frisbee golf</span>
-          <br />
-          <input
-            onChange={(e) =>
-              setSports(
-                sports.includes(e.target.value)
-                  ? sports
-                  : [...sports, e.target.value]
-              )
-            }
-            type="checkbox"
-            id="sport5"
-            name="sport5"
-            value="Golf"
-          ></input>
-          <span>Golf</span>
+          <div>
+            <input
+              onChange={(e) =>
+                setSports(
+                  sports.includes(e.target.value)
+                    ? sports
+                    : [...sports, e.target.value]
+                )
+              }
+              type="checkbox"
+              id="sport3"
+              name="sport3"
+              value="Cricket"
+            ></input>
+            <span>Cricket</span>
+            <br />
+            <input
+              onChange={(e) =>
+                setSports(
+                  sports.includes(e.target.value)
+                    ? sports
+                    : [...sports, e.target.value]
+                )
+              }
+              type="checkbox"
+              id="sport4"
+              name="sport4"
+              value="Frisbee Golf"
+            ></input>
+            <span>Frisbee golf</span>
+            <br />
+            <input
+              onChange={(e) =>
+                setSports(
+                  sports.includes(e.target.value)
+                    ? sports
+                    : [...sports, e.target.value]
+                )
+              }
+              type="checkbox"
+              id="sport5"
+              name="sport5"
+              value="Golf"
+            ></input>
+            <span>Golf</span>
+          </div>
         </div>
         <br />
         <label>Level</label>

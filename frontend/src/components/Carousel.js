@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Carousel from "react-elastic-carousel";
 import Item from "./Item";
-import img1 from "../Images/group-tennis-player.jpg";
-import img2 from "../Images/laughing.jpg";
-import img3 from "../Images/intramural_Soccer16_5442.jpg";
-import img4 from "../Images/womansteam.jpg";
+import img1 from "../Images/nike_shoe_ad.webp";
+import img2 from "../Images/Garmin-Fenix-6.jpg";
+import img3 from "../Images/adidas.jpg";
+
 import "../App.css";
 
 const breakPoints = [{ width: 1, itemsToShow: 1 }];
@@ -24,9 +24,6 @@ function CarouselD() {
             </Item>
             <Item className="img3">
               <img className="img33" src={img3} />
-            </Item>
-            <Item className="img4">
-              <img className="img44" src={img4} />
             </Item>
           </Carousel>
         </div>
