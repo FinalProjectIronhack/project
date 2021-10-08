@@ -8,12 +8,7 @@ import img3 from "../Images/intramural_Soccer16_5442.jpg";
 import img4 from "../Images/womansteam.jpg";
 import "../App.css";
 
-const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2 },
-  { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 },
-];
+const breakPoints = [{ width: 1, itemsToShow: 1 }];
 
 function CarouselD() {
   return (
