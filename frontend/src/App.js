@@ -18,7 +18,7 @@ import Profile from "./components/Profile";
 import Footer from "./components/sub-components/Footer";
 import FindPlayer from "./components/sub-components/FindPlayer";
 import ChatRoom from "./components/ChatRoom";
-
+import MyMessages from "./components/MyMessages";
 function App() {
   const [user, setUser] = useState({});
 
@@ -71,6 +71,11 @@ function App() {
           exact
           path="/my-profile"
           render={(props) => <Profile user={user} {...props} />}
+        />
+        <Route
+          exact
+          path="/my-messages"
+          render={(props) => <MyMessages user={user} {...props} />}
         />
         <Route exact path="/how-does-it-work" component={HowItWorks} />
         <Route exact path="/sign-up" component={SignUp} />

@@ -31,7 +31,13 @@ function Player({ player, history }) {
         <div className="lower-container">
           <h3> {player.name}</h3>
           <p>{player.bio}</p>
-          <h4>My Sports: {player.sports}</h4>
+
+          <h4>
+            My Sports:{" "}
+            {player?.sports?.map((sport) => {
+              return <p>{sport}</p>;
+            })}
+          </h4>
           <h4>Level: {player.level}</h4>
           <h4>Zip-Code: {player.zip}</h4>
           <h4>Gender: {player.gender}</h4>

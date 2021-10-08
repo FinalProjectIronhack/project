@@ -11,7 +11,6 @@ function FindPlayer(props) {
   useEffect(async () => {
     let res = await actions.getPlayers({});
     setPlayers(res.data);
-    console.log(res.data.level);
   }, []);
 
   const searchPlayers = (e) => {

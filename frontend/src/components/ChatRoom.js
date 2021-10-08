@@ -19,7 +19,7 @@ function ChatRoom(props) {
   };
 
   useEffect(async () => {
-    let res = await actions.getRoom({ roomID: props.match.params.roomId });
+    let res = await actions.getRoom({ roomId: props.match.params.roomId });
     // setRoom(res.data);
     console.log(res.data);
     setMessages(res.data);
