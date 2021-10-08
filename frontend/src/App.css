@@ -149,6 +149,15 @@ footer {
   text-align: center;
 }
 
+.my-messages {
+  text-align: center;
+  margin: 5rem;
+}
+
+.my-message-div {
+  border: 1px solid #fc5200;
+}
+
 form#search-form {
   display: flex;
   justify-content: space-between;
