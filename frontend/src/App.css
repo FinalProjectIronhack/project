@@ -53,7 +53,8 @@ nav {
   align-items: center;
   margin-top: 50px;
   height: 10vh;
-
+  margin-left: 1rem;
+  font-size: larger;
   background-color: black;
   text-align: center;
 }
@@ -109,6 +110,7 @@ form#search-form {
   margin-top: 30px;
   border: 2px solid rgb(143 142 142);
   background-color: white;
+  margin-bottom: 5rem;
   margin: 10rem;
 }
 
@@ -120,6 +122,7 @@ form#search-form {
   margin: 10px;
   margin-left: 240px;
   margin-right: 240px;
+  margin-bottom: 3rem;
   background-color: white;
 }
 .profilehr {
@@ -378,7 +381,8 @@ footer > img {
   justify-content: center;
   margin-left: 240px;
   margin-right: 240px;
-  margin-bottom: 5px;
+  margin-bottom: 3rem;
+
   background-color: rgb(242, 241, 241);
 }
 
@@ -425,8 +429,8 @@ footer > img {
   margin-left: 1vw;
 }
 .hhr {
-  border: 0.5px solid rgb(143, 142, 142);
-  color: rgb(143, 142, 142);
+  border: 0.5px solid #fc5200;
+  color: #fc5200;
   width: 99%;
 }
 .logoo {
@@ -437,6 +441,8 @@ footer > img {
   margin-left: 14vw;
   margin-right: 14vw;
   height: 15vh;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 .Nike-logo {
   height: 15vh;
