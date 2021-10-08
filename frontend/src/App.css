@@ -383,7 +383,7 @@ footer > img {
 .img22 {
   object-fit: cover;
   height: 50vh;
-  width: 50vw;
+  width: 45vw;
   border: 2px solid rgb(89, 87, 87);
   border-radius: 5px;
   margin: 5px;
@@ -411,4 +411,19 @@ footer > img {
   border: 2px solid rgb(89, 87, 87);
   border-radius: 5px;
   margin: 5px;
+}
+.ctai {
+  width: 10vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+.ctai2 {
+  width: 10vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+.hhr {
+  border: 0.5px solid rgb(143, 142, 142);
+  color: rgb(143, 142, 142);
+  margin-right: 3vw;
 }
