@@ -36,6 +36,7 @@ function FindPlayer(props) {
     setPlayers(res.data);
     console.log(res.data.zip);
   };
+
   const ShowProfile = () => {
     return players.map((player) => {
       return <Player player={player} history={props.history} />;

@@ -47,6 +47,15 @@ router.get("/all-questions", authorize, async (req, res) => {
   res.json(allQuestions);
 });
 
+router.get("/Messenger", authorize, async (req, res) => {
+  let messages = await Messages.find();
+  console.log(messages);
+});
+
+
+
+
+
 router.get("/my-posts", authorize, async (req, res) => {
   let allPosts = await Post.find({ userId: res.locals.user._id });
   console.log(res.locals.user);
