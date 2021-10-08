@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import actions from "../api";
-import "./chatRoom.css"
+import "./chatRoom.css";
+import { Link } from "react-router-dom";
 
 function ChatRoom(props) {
   let [messages, setMessages] = useState([]);
@@ -33,27 +34,53 @@ function ChatRoom(props) {
   };
 
   return (
-    <div>
-      <div className="chatRoom" >
+    <div className="bodychat">
+      <div className="chatbox" >
+        <link rel="stylesheet" type="text/css" />
+        <div className="chatlogs">
+          <div className="chat friend">
+            <div className="user-photo"> </div>
+            <p className="chat-message">Hello!!</p>
+          </div>
+          <div className="chat self">
+            <div className="user-photo"></div>
+            <p className="chat-message">
+              <ShowMessages />
+            </p>
 
-        <h1>Play Sports Chat Room</h1>
-        <ol className="messages">
-          {/* Chat Room {props.match.params.roomId} */}
 
-          <ShowMessages />
-          <li className="mine"></li>
-          {/* <div> */}
+          </div>
+        </div>
+        <div className="chat-form">
+
+
+
           <form onSubmit={handleSubmit}>
-            <input value={post} onChange={(e) => setPost(e.target.value)}></input>
-            <button>Send!</button>
+            <input className="textarea" value={post} onChange={(e) => setPost(e.target.value)}></input>
+            <button>SEND</button>
           </form>
-        </ol>
-
-
-
-
+        </div>
       </div>
+
     </div>
+    // <h1>Play Sports Chat Room</h1>
+    // <ol className="messages">
+    //   {/* Chat Room {props.match.params.roomId} */}
+    //<li className="mine"></li>
+    //   <ShowMessages />
+    //  
+    //   
+    //   <form onSubmit={handleSubmit}>
+    //     <input value={post} onChange={(e) => setPost(e.target.value)}></input>
+    //     <button>Send!</button>
+    //   </form>
+    // </ol>
+
+
+
+
+    //   </div>
+    // </div>
   );
 }
 
