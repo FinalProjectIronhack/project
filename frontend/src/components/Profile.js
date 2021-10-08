@@ -35,7 +35,12 @@ function Profile(props) {
         <div className="lower-container">
           <h3> {profile.name}</h3>
           <p>{profile.bio}</p>
-          <h4>My Sports: {profile.sports}</h4>
+          <h4>
+            My Sports:{" "}
+            {profile?.sports?.map((sport) => {
+              return <p>{sport}</p>;
+            })}
+          </h4>
           <h4>Level: {profile.level}</h4>
           <h4>Zip-Code: {profile.zip}</h4>
           <h4>Gender: {profile.gender}</h4>

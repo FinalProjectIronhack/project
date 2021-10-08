@@ -5,10 +5,7 @@ const userSchema = new Schema(
     admin: { type: Boolean, default: false },
     bio: String,
     age: { type: Number, min: 1 },
-    sports: {
-      type: String,
-      enum: ["Tennis", "Soccer", "Cricket", "Frisbee Golf", "Golf"],
-    },
+    sports: [String],
     level: {
       type: String,
       enum: [
