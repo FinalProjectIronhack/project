@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import actions from "../api";
+import { Button } from "./button";
 
 function UserDetails(props) {
   let [bio, setBio] = useState("");
@@ -57,7 +58,7 @@ function UserDetails(props) {
             ></input>
           </div>
           <div>
-            <span>Gender</span>
+            <span>Gender</span>{" "}
             <select
               name="gender"
               id="gender"
@@ -73,8 +74,8 @@ function UserDetails(props) {
           </div>
         </div>
         <br />
-        <div>
-          My Sports
+        <h3 className="my-sp">My Sports</h3>
+        <div className="my-sports">
           <br />
           <div>
             <input
@@ -171,22 +172,27 @@ function UserDetails(props) {
           </div>
         </div>
         <br />
-        <label>Level</label>
-        <select
-          name="level"
-          id="level"
-          onChange={(e) => setLevel(e.target.value)}
-        >
-          <option value="" selected="">
-            Any
-          </option>
-          <option value="1. Beginner">1. Beginner</option>
-          <option value="2. Advanced Beginner">2. Advanced Beginner</option>
-          <option value="3. Intermediate">3. Intermediate</option>
-          <option value="4. Competitor">4. Competitor</option>
-          <option value="5. Expert">5. Expert</option>
-        </select>
-        <button>Submit</button>
+        <div className="level">
+          <span>Level</span>{" "}
+          <select
+            name="level"
+            id="level"
+            onChange={(e) => setLevel(e.target.value)}
+          >
+            <option value="" selected="">
+              Any
+            </option>
+            <option value="1. Beginner">1. Beginner</option>
+            <option value="2. Advanced Beginner">2. Advanced Beginner</option>
+            <option value="3. Intermediate">3. Intermediate</option>
+            <option value="4. Competitor">4. Competitor</option>
+            <option value="5. Expert">5. Expert</option>
+          </select>
+        </div>
+        <br />
+        <div className="my-prof-btn">
+          <Button>Submit</Button>
+        </div>
       </form>
     </div>
   );

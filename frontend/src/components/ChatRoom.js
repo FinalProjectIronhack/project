@@ -35,7 +35,7 @@ function ChatRoom(props) {
 
   return (
     <div className="bodychat">
-      <div className="chatbox">
+      <div className="chatbox" >
         <link rel="stylesheet" type="text/css" />
         <div className="chatlogs">
           <div className="chat friend">
@@ -47,15 +47,16 @@ function ChatRoom(props) {
             <p className="chat-message">
               <ShowMessages />
             </p>
+
+
           </div>
         </div>
         <div className="chat-form">
+
+
+
           <form onSubmit={handleSubmit}>
-            <input
-              className="textarea"
-              value={post}
-              onChange={(e) => setPost(e.target.value)}
-            ></input>
+            <input className="textarea" value={post} onChange={(e) => setPost(e.target.value)}></input>
             <button>SEND</button>
           </form>
         </div>
@@ -66,13 +67,16 @@ function ChatRoom(props) {
     //   {/* Chat Room {props.match.params.roomId} */}
     //<li className="mine"></li>
     //   <ShowMessages />
-    //
-    //
+    //  
+    //   
     //   <form onSubmit={handleSubmit}>
     //     <input value={post} onChange={(e) => setPost(e.target.value)}></input>
     //     <button>Send!</button>
     //   </form>
     // </ol>
+
+
+
 
     //   </div>
     // </div>

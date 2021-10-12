@@ -131,6 +131,33 @@ footer {
   justify-content: space-around;
 }
 
+.my-sports {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.level {
+  text-align: center;
+}
+
+.my-sp {
+  text-align: center;
+}
+
+.my-prof-btn {
+  text-align: center;
+}
+
+.my-messages {
+  text-align: center;
+  margin: 5rem;
+}
+
+.my-message-div {
+  border: 1px solid #fc5200;
+}
+
 form#search-form {
   display: flex;
   justify-content: space-between;
