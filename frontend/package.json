@@ -15,10 +15,7 @@
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.1",
-<<<<<<< HEAD
-=======
     "sweetalert": "^2.1.2",
->>>>>>> 0657e1eb37c7e1595491218877e2efd81e281b42
     "web-vitals": "^1.0.1"
   },
   "scripts": {

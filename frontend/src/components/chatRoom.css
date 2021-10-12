@@ -83,3 +83,13 @@
      font-size:18px;
      color:#333;
  }
+ .chat-form .textarea:focus{
+     background: #fff;
+ }
+ .chat-form button{
+    background: #1ddced; 
+    padding:5px 15px;
+    font-size:30px;
+    color:black;
+    
+ }
