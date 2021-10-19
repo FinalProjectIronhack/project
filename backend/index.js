@@ -15,7 +15,7 @@ mongoose
 
 app.use(cors()); //for CORS
 app.use(express.json()); //for req.body
-app.use(`/api`, require("./routes")); //Let's us put all our routes in one seperate file and adds /api infront of i t
+app.use(`/api`, require("./routes")); //Let's us put all our routes in one seperate file and adds /api in front of it
 
 app.listen(process.env.PORT || 5000, () =>
   console.log(`Port listening on 5000`)
