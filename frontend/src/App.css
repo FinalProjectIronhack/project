@@ -10,13 +10,6 @@
 body {
   color: F2F1F1;
 }
-.bannerText {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  margin: 50px;
-}
 
 .navBar {
   display: flex;
@@ -65,12 +58,7 @@ footer {
   align-items: center;
   background-color: black;
 }
-.pf {
-  color: white;
-}
-.af {
-  color: rgb(252, 82, 0);
-}
+
 .header {
   display: flex;
   align-items: center;
@@ -180,20 +168,7 @@ form#search-form {
   margin-bottom: 3rem;
   background-color: white;
 }
-.profilehr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-}
 
-.detail-container {
-  background-color: white;
-  width: 250px;
-  border: 2px solid grey;
-  margin-bottom: 20px;
-  text-align: center;
-}
 .search-form {
   display: flex;
   background-color: linear-gradient(to left, rgba(252, 170, 0, 1), #fc5200);
@@ -202,10 +177,7 @@ label {
   display: flex;
   margin: 5px;
 }
-small {
-  display: flex;
-  margin: 5px;
-}
+
 .player {
   display: flex;
   justify-content: center;
@@ -263,9 +235,7 @@ small {
   padding: 5px;
   transform: translate(95px, 45px);
 }
-.profilePic {
-  border: 2px solid #fc5200;
-}
+
 .lower-container h3,
 h4,
 p {
@@ -388,16 +358,8 @@ footer > img {
 .profilepic {
   border-radius: 50%;
 }
-.iphoneMock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  height: 70vh;
-  width: 70vw;
-  margin-top: 20px;
-}
-.mockContainer {
+
+.carosel {
   display: flex;
   justify-content: center;
   align-items: center;

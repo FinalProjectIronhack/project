@@ -90,8 +90,7 @@ function SportHome(props) {
         </div>
       </div>
 
-      <div className="mockContainer">
-        {/* <img className="iphoneMock" src={mock} alt="mockUp" /> * */}
+      <div className="carosel">
         <CarouselD> </CarouselD>
       </div>
       <div></div>

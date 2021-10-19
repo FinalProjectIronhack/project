@@ -42,9 +42,7 @@ btn:hover {
   border: none;
   color: white;
 }
-.homeButton {
-  width: 10vw;
-}
+
 .btn--large {
   margin: 1rem;
   padding: 15px 30px;
