@@ -71,16 +71,17 @@
      display:flex;
      align-items:flx-start;
 
+
  }
  .chat-form .textarea{
      background: #fbfbfb;
-     width:75%;
-    height:30px;
+     width:30vw;
+    height:40px;
     border:2px solid #eee;
     border-radius: 3px;
      resize:none;
-     padding:10px;
-     font-size:18px;
+     padding:5px 15px;
+     font-size:20px;
      color:#333;
  }
  .chat-form .textarea:focus{
@@ -89,7 +90,7 @@
  .chat-form button{
     background: #1ddced; 
     padding:5px 15px;
-    font-size:30px;
+    font-size:20px;
     color:black;
     
  }

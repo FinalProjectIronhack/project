@@ -61,7 +61,6 @@ function ChatRoom(props) {
           </form>
         </div>
       </div>
-
     </div>
     // <h1>Play Sports Chat Room</h1>
     // <ol className="messages">

@@ -13,7 +13,7 @@ import { Button } from "./button";
 import nike from "../Images/equality_logo-03_6__original.jpg";
 import start from "../Images/starting-removebg-preview.png";
 import CarouselD from "./Carousel";
-// import swal from "sweetalert";
+import swal from "sweetalert";
 function SportHome(props) {
   const bannerError = (e) => {
     alert(e);
