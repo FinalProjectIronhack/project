@@ -13,12 +13,12 @@ router.get("/all-posts", async (req, res) => {
   let allPosts = await Post.find().populate("userId");
   res.json(allPosts);
 });
-
+// here we are routing from the back end the following parameters and then storing it into allPosts. we tell the computer that whatever it recieves, we want it to go to /all-posts. we then tell the computer we want it to find()(meaning find all) in the Post collection and populate any data with a 'userId' we then take the resulting information and make it a JSON. (completes the API process.)
 //http://localhost:5000/api/questions POST To manage questions
 router.post("/questions", async (req, res) => {
   let question = await Question.create(req.body);
   res.json(question);
-  // here we create our new question and the result us added to res.json.
+  // here we take the users input(req.body) and we create our new question by filtering what is posted to our questions api through our schema and we route it to the back end.
 });
 
 //http://localhost:5000/api/questions POST To answer question
@@ -33,15 +33,18 @@ router.post("/update-question", authorize, async (req, res) => {
   );
   res.json(question);
 });
+// here we take take whatever is posted to the update-question api, we find the question with the corresponding ID, and we update that Question to contain the answer inputted by the user(admin)
 
 //http://localhost:5000/api/show-questions GET
 router.get("/all-questions", authorize, async (req, res) => {
   console.log(res.locals.user);
   let allQuestions = null;
+  // all questions start with the value null, if the question is admin verifies the question, it will populate the userID
   if (res.locals.user.admin) {
     allQuestions = await Question.find().populate("userId");
   } else {
     allQuestions = await Question.find({ show: true });
+    // if the question has been given a value of true to show, that value can also be shown.
   }
   console.log(allQuestions);
   res.json(allQuestions);
@@ -50,6 +53,7 @@ router.get("/all-questions", authorize, async (req, res) => {
 router.get("/Messenger", authorize, async (req, res) => {
   let messages = await Messages.find();
   console.log(messages);
+  //
 });
 
 router.get("/my-posts", authorize, async (req, res) => {
@@ -103,10 +107,13 @@ router.post("/authenticate", async (req, res) => {
   let user = await User.findOne({ email: req.body.email });
   if (!user) {
     //if the user is not in database create them
+    // we have our google login. we the user logs in, we get googles response. in googles response we have our profileObj. we take the profile object and we plug i our authenticate action. the authentication action takes the profileObj and posts it to our authenticate api. when it is recieved into the api, our router takes that information, and using our User collection/schema, checks and sees if the email of the said user exists already. if the user does not exist, we create a new user with the profileObj(req.body)
     user = await User.create(req.body);
   }
+
   jwt.sign({ user }, "secret key", { expiresIn: "120min" }, (err, token) => {
     res.json({ user, token });
+    // we then use JWT to assign the user a secret encrypted key that allows the user and its token to be logged in. after 120 min this secret key expires and the user is logged out
   });
 });
 

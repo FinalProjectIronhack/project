@@ -20,7 +20,7 @@ const actions = {
       `${SERVER_URL}/questions`,
       { name, question },
       createHeader()
-      // here we create our
+      // here we create our we take the name and question values submitted by the user and we post it to our /api/questions. we are passing through here name and question as our props. once this gets to the api, it gets filtered through the schema and routed to the backend database.
     );
   },
   newChatRoom: async ({ from, to }) => {
@@ -58,7 +58,7 @@ const actions = {
       `${SERVER_URL}/update-question`,
       answer,
       createHeader()
-      // here we create our
+      // here we attach our answer to the corresponding question. we do this by submitting the answer and then we use the findByIdAndUpdate function to update the question to have the answer. we post that answer to the database.
     );
   },
   getPlayers: async (player) => {
@@ -76,7 +76,6 @@ const actions = {
       clickedOn,
       createHeader()
     );
-
   },
 
   getProfile: async () => {
