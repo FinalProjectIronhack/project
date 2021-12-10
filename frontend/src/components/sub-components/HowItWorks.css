@@ -24,6 +24,10 @@ hr {
   background-color: #e5e5e5;
 }
 .hiwhr {
+  position: relative;
+  left: 30vw;
+  justify-content: center;
+  align-items: center;
   width: 50vw;
 }
 .hiwp {

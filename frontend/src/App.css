@@ -157,6 +157,10 @@ form#search-form {
   margin: 10rem;
 }
 
+.ctah {
+  padding: 1vh;
+}
+
 .callToAction {
   display: flex;
   border: 1px solid slategrey;
@@ -167,6 +171,7 @@ form#search-form {
   margin-right: 240px;
   margin-bottom: 3rem;
   background-color: white;
+  padding: 2vh;
 }
 
 .search-form {
@@ -449,6 +454,9 @@ footer > img {
   border: 0.5px solid #fc5200;
   color: #fc5200;
   width: 99%;
+}
+.ctab {
+  padding: 1vh;
 }
 .logoo {
   display: flex;

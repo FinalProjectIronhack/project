@@ -36,21 +36,23 @@ function SportHome(props) {
         <div className="btndiv">
           <Link to="/FAQ">
             <Button className="homeButton" buttonSize="button--large">
-              FAQ
+              Frequently <br></br>
+              Asked <br></br>
+              Questions
             </Button>
           </Link>
         </div>
         <div className="btndiv">
           <Link to="/all-players">
             <Button className="homeButton" buttonSize="button--large">
-              Find Players
+              Find <br></br> Players
             </Button>
           </Link>
         </div>
       </div>
-      <div className="logoo">
+      {/* <div className="logoo">
         <img className="Nike-logo" src={nike} />
-      </div>
+      </div> */}
       <h1 className="car-header"> Connect. Message. Meet. Play. </h1>
       <div className="callToAction">
         <div className="mediaLeft">
@@ -71,7 +73,7 @@ function SportHome(props) {
           </a>
         </div>
       </div>
-      <div className="callToAction">
+      <div className="callToAction cta2">
         <div className="mediaRight">
           <img className="ctai2" src={teams} />
         </div>

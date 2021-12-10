@@ -25,7 +25,10 @@ function HowItWorks() {
         <div className="containerHIW">
           <header className="hiwh"></header>
           <img className="hiwi" src={map} alt="womans team photo" />
-          <h1> How it works </h1> <hr className="hiwhr"></hr>
+          <h1> How it works </h1>
+          <div>
+            <hr></hr>
+          </div>
           <br></br>
           <h1>
             <strong>Our Mission</strong>
