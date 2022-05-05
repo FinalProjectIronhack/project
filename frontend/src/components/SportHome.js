@@ -36,16 +36,14 @@ function SportHome(props) {
         <div className="btndiv">
           <Link to="/FAQ">
             <Button className="homeButton" buttonSize="button--large">
-              Frequently <br></br>
-              Asked <br></br>
-              Questions
+              Frequently Asked Questions
             </Button>
           </Link>
         </div>
         <div className="btndiv">
           <Link to="/all-players">
             <Button className="homeButton" buttonSize="button--large">
-              Find <br></br> Players
+              Find Players Near You
             </Button>
           </Link>
         </div>
