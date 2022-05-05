@@ -20,29 +20,27 @@ function Header(props) {
       <header className="header">
         <div className="logodiv">
           <img src={logo} />
-          <h1>Play Sports</h1>
+          <h1 className="logoText">Play Sports</h1>
         </div>
 
-        <div className="navBar">
-          <nav>
-            <Link className="links" to="/">
-              Home
-            </Link>
-            <Link className="links" to="/all-players">
-              FindAPlayer
-            </Link>
-            {user?.name ? (
-              <>
-                <Link className="links" to="/my-profile">
-                  MyProfile
-                </Link>
-                <Link className="links" to="/my-messages">
-                  Messages
-                </Link>
-              </>
-            ) : null}
-          </nav>
-        </div>
+        <nav>
+          <Link className="links" to="/">
+            Home
+          </Link>
+          <Link className="links" to="/all-players">
+            FindAPlayer
+          </Link>
+          {user?.name ? (
+            <>
+              <Link className="links" to="/my-profile">
+                MyProfile
+              </Link>
+              <Link className="links" to="/my-messages">
+                Messages
+              </Link>
+            </>
+          ) : null}
+        </nav>
 
         {user?.name ? (
           <div id="auth">
@@ -52,7 +50,7 @@ function Header(props) {
             <Button onClick={logOut}>Log Out</Button>
           </div>
         ) : (
-          <Auth getUser={getUser} />
+          <Auth className="google" getUser={getUser} />
         )}
       </header>
       <img className="mainImg" src={Mainimg} alt="MainImage"></img>

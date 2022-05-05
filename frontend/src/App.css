@@ -65,7 +65,7 @@ footer {
   justify-content: space-evenly;
   position: sticky;
   top: 0;
-  z-index: 100;
+ 
   background-color: white;
   font-family: "Iceberg", cursive;
   padding: 1rem 2rem;
@@ -472,19 +472,37 @@ footer > img {
 .Nike-logo {
   height: 15vh;
 }
-/* Portrait */
-@media only screen and (max-device-width: 600px) {
-  .car-header {
-    position: relative;
-    left: -10vw;
-  }
-  .callToAction {
-    position: relative;
-    left: -50vw;
-    width: 75vw;
-    padding: 10px;
-  }
-  .carosel {
-    display: none;
-  }
+
+
+@media only screen and (min-width: 300px){
+.navBar{
+position: relative;
+top:2.5rem;
+right: 16rem;
 }
+.logoText{
+  height:1rem;
+}
+.logodiv{
+  position: relative;
+  left:4rem;
+  z-index: 0;
+}
+.links{
+  position: relative;
+  z-index: 10;
+  top:2rem;
+  right:6rem;
+  margin:1rem;
+}
+.google{
+  position: relative;
+  right:3.5rem;
+  bottom:1rem;
+}
+}
+@media screen and (min-width: 768px){
+
+}
+
+@media screen and (min-width: 992px){}
