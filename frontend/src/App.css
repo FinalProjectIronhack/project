@@ -398,9 +398,7 @@ footer > img {
   top: 0px;
 }
 .car-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ position: relative;
   margin-left: 240px;
   margin-right: 240px;
   margin-bottom: 3rem;
@@ -499,6 +497,27 @@ right: 16rem;
   position: relative;
   right:3.5rem;
   bottom:1rem;
+}
+.car-header{
+  position: relative;
+  right:6rem;
+}
+.callToAction{
+  position: relative;
+  right:15rem;
+  width:100%
+}
+.carosel{
+  width: 100%;
+ 
+}
+.car-container{
+  width:100%;
+ 
+}
+.car{
+  width:100%;
+ 
 }
 }
 @media screen and (min-width: 768px){
