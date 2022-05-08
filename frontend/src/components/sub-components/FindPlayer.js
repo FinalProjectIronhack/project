@@ -45,7 +45,11 @@ function FindPlayer(props) {
 
   return (
     <div>
-      <form id="search-form" onSubmit={searchPlayers}>
+      <form
+        className="findPlayerForm"
+        id="search-form"
+        onSubmit={searchPlayers}
+      >
         <label>ZIP</label>
         <input type="text" id="city_zip" placeholder="Enter your Zip code" />
         <br />

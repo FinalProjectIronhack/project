@@ -24,30 +24,32 @@ function Header(props) {
         </div>
 
         <nav>
-          <Link className="links" to="/">
-            Home
+          <Link className="standardLinks" to="/">
+            <p>Home</p>
           </Link>
-          <Link className="links" to="/all-players">
-            FindAPlayer
+          <Link className="standardLinks" to="/all-players">
+            <p>FindAPlayer</p>
           </Link>
           {user?.name ? (
             <>
-              <Link className="links" to="/my-profile">
-                MyProfile
+              <Link className="userLinks" to="/my-profile">
+                <p>MyProfile</p>
               </Link>
-              <Link className="links" to="/my-messages">
-                Messages
+              <Link className="userLinks" to="/my-messages">
+                <p>Messages</p>
               </Link>
             </>
           ) : null}
         </nav>
 
         {user?.name ? (
-          <div id="auth">
+          <div className="profilehead" id="auth">
             <Link to="/my-profile">
               <img className="profilepic" src={user?.imageUrl} />
             </Link>
-            <Button onClick={logOut}>Log Out</Button>
+            <div className="logOutButton">
+              <Button onClick={logOut}>Log Out</Button>
+            </div>
           </div>
         ) : (
           <Auth className="google" getUser={getUser} />

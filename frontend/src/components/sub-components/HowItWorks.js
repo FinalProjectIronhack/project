@@ -3,6 +3,7 @@ import map from "../../Images/monochromaticcolors.webp";
 import mission from "../../Images/mission_icon-removebg-preview (1).png";
 import steps from "../../Images/steps_icon-removebg-preview.png";
 import "./HowItWorks.css";
+import "../../App.css";
 import select from "../../Images/select-removebg-preview.png";
 import running from "../../Images/running_icon-removebg-preview.png";
 import { Button } from "../button.jsx";
@@ -25,14 +26,13 @@ function HowItWorks() {
         <div className="containerHIW">
           <header className="hiwh"></header>
           <img className="hiwi" src={map} alt="womans team photo" />
-          <h1> How it works </h1>
-          <div>
+          <h1 className="hitt"> How it works </h1>
+          <div className="line">
             <hr></hr>
           </div>
-          <br></br>
-          <h1>
+          <h2 className="missiont">
             <strong>Our Mission</strong>
-          </h1>
+          </h2>
           <img className="mission" src={mission} />
           <p>We work hard so that you can play hard.</p>
           <p className="hiwp">
@@ -78,7 +78,7 @@ function HowItWorks() {
             meet up if its not already specified. REMEMBER! Be safe, meet in
             public spaces, and never share personal information!{" "}
           </p>
-          <Link className="links" to="/my-messages">
+          <Link className="messagelink" to="/my-messages">
             <Button buttonSize="button--large" className="hiwb">
               Messages
             </Button>

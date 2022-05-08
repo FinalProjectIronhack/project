@@ -486,12 +486,21 @@ right: 16rem;
   left:4rem;
   z-index: 0;
 }
-.links{
+.standardLinks{
   position: relative;
   z-index: 10;
-  top:2rem;
-  right:6rem;
-  margin:1rem;
+  top:3rem;
+  right:10rem;
+  margin: 1rem;
+  
+
+}
+.userLinks{
+  position: relative;
+  top:3rem;
+  right:8rem;
+ margin: 1rem;
+ margin-right: 2rem;
 }
 .google{
   position: relative;
@@ -519,6 +528,31 @@ right: 16rem;
   width:100%;
  
 }
+.profilehead{
+
+}
+.profilepic{
+  position: relative;
+  right:15.3rem;
+  top:1rem;
+  height:4rem;
+}
+.logOutButton{
+  position: relative;
+  bottom:5rem;
+}
+.logodiv{
+  position: relative;
+  left:5rem;
+}
+.findPlayerForm{
+  position: relative;
+  right:10rem;
+  width:100%;
+  margin: 1rem;
+
+}
+
 }
 @media screen and (min-width: 768px){
 
