@@ -10,7 +10,13 @@
 body {
   color: F2F1F1;
 }
+.findPlayerForm{
+  position: relative;
+  right:10rem;
+  width:100%;
+  margin: 1rem;
 
+}
 .navBar {
   display: flex;
   overflow: hidden;
