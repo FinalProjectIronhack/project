@@ -558,6 +558,26 @@ right: 16rem;
   margin: 1rem;
 
 }
+.continueForm{
+  position: relative;
+  top:7rem;
+  right:22rem;
+}
+.genderLabel{
+  position: relative;
+  bottom:3rem;
+  right:1rem;
+}
+.genderSelect{
+  position: relative;
+  bottom:5.8rem;
+  left:3rem;
+}
+.searchButton{
+  position: relative;
+  bottom:8.4rem;
+  left:8rem;
+}
 
 }
 @media screen and (min-width: 768px){

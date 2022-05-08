@@ -65,17 +65,21 @@ function FindPlayer(props) {
           <option value="4. Competitor">4. Competitor</option>
           <option value="5. Expert">5. Expert</option>
         </select>
-        <label>Gender</label> <br />
-        <select name="gender" id="gender">
-          <option value="" selected="">
-            Any
-          </option>
-          <option value="M">Male</option>
-          <option value="F">Female</option>
-          <option value="Other">Other</option>
-        </select>
-        <p>&nbsp;</p>
-        <button type="submit"> SEARCH</button>
+        <div className="continueForm">
+          <label className="genderLabel">Gender</label> <br />
+          <select className="genderSelect" name="gender" id="gender">
+            <option value="" selected="">
+              Any
+            </option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="Other">Other</option>
+          </select>
+          <p>&nbsp;</p>
+          <button className="searchButton" type="submit">
+            SEARCH
+          </button>
+        </div>
       </form>
       <div className="profilesContainer">
         <ShowProfile />
