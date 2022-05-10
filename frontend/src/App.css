@@ -582,6 +582,145 @@ right: 16rem;
 }
 @media screen and (min-width: 768px){
 
+  .navBar{
+    position: relative;
+    top:2.5rem;
+    right: 16rem;
+    }
+    .logoText{
+      height:1rem;
+    }
+    .logodiv{
+      position: relative;
+      left:4rem;
+      z-index: 0;
+    }
+    .standardLinks{
+      position: relative;
+      z-index: 10;
+      top:3rem;
+      right:10rem;
+      margin: 1rem;
+      
+    
+    }
+    .userLinks{
+      position: relative;
+      top:3rem;
+      right:8rem;
+     margin: 1rem;
+     margin-right: 2rem;
+    }
+    .google{
+      position: relative;
+      right:3.5rem;
+      bottom:1rem;
+    }
+    .car-header{
+      position: relative;
+      right:6rem;
+    }
+    .callToAction{
+      position: relative;
+      right:15rem;
+      width:100%
+    }
+    .carosel{
+      width: 100%;
+     
+    }
+    .car-container{
+      width:100%;
+     
+    }
+    .car{
+      width:100%;
+     
+    }
+    .profilehead{
+    
+    }
+    .profilepic{
+      position: relative;
+      right:16.2rem;
+      top:1rem;
+      height:4rem;
+    }
+    .logOutButton{
+      position: relative;
+      bottom:5rem;
+    }
+    .logodiv{
+      position: relative;
+      left:5rem;
+    }
+    .findPlayerForm{
+      position: relative;
+      right:10rem;
+      width:100%;
+      margin: 1rem;
+    
+    }
+    .continueForm{
+      position: relative;
+      top:7rem;
+      right:22rem;
+    }
+    .genderLabel{
+      position: relative;
+      bottom:3rem;
+      right:1rem;
+    }
+    .genderSelect{
+      position: relative;
+      bottom:5.8rem;
+      left:3rem;
+    }
+    .searchButton{
+      position: relative;
+      bottom:8.4rem;
+      left:8rem;
+    }
 }
 
-@media screen and (min-width: 992px){}
+@media screen and (min-width: 992px){
+  .profilepic{
+    position: relative;
+    right:69.2rem;
+    top: 1.2rem;
+  }
+nav{
+  padding-bottom: 1rem;;
+}
+.genderLabel{
+  position: relative;
+  bottom:4.4rem;
+  right:15rem;;
+}
+.genderSelect{
+  position: relative;
+  bottom:7.2rem;
+ left:-10rem;
+}
+.searchButton{
+  position: relative;
+  bottom:9.6rem;
+  left:-1rem;
+}
+.skillSelect{
+  position: relative;
+  right:34rem;
+}
+.zipInput{
+  position: relative;
+  
+}
+.zip{
+  position: relative;
+  left:9rem;
+}
+.level{
+  position: relative;
+  right:15rem;
+}
+}

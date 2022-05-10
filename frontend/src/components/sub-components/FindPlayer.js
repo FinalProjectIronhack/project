@@ -50,11 +50,16 @@ function FindPlayer(props) {
         id="search-form"
         onSubmit={searchPlayers}
       >
-        <label>ZIP</label>
-        <input type="text" id="city_zip" placeholder="Enter your Zip code" />
+        <label className="zip">ZIP</label>
+        <input
+          className="zipInput"
+          type="text"
+          id="city_zip"
+          placeholder="Enter your Zip code"
+        />
         <br />
-        <label>Level</label> <br />
-        <select name="skill_level" id="skill_level">
+        <label className="level">Level</label> <br />
+        <select className="skillSelect" name="skill_level" id="skill_level">
           <option value="" defaultValue="">
             All levels
           </option>
