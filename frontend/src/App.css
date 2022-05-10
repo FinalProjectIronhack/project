@@ -580,7 +580,7 @@ right: 16rem;
 }
 
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 600px){
 
   .navBar{
     position: relative;
@@ -642,9 +642,14 @@ right: 16rem;
     }
     .profilepic{
       position: relative;
-      right:16.2rem;
-      top:1rem;
+      right:28.5rem;
+      top:1.6rem;
       height:4rem;
+    
+    }
+    nav{
+      padding-top: 1rem;;
+      padding-bottom: 1rem;;
     }
     .logOutButton{
       position: relative;
